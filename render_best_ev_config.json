@@ -1,0 +1,15 @@
+
+{
+  "exposure": {
+    "ev_methods": [
+      "Aggregated_Mean_EV_Classical",
+      "Aggregated_WMean_EV_Classical",
+      "Aggregated_Mean_EV_GD",
+      "Aggregated_WMean_EV_GD"
+    ]
+  },
+  "paths": {
+    "exposure_csv_path": "C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\best_exposure_calculation_outputs\\Aggregated_EV_Report.csv",
+    "base_output_dir": "C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\best_exposure_rendered_outputs"
+  }
+}
