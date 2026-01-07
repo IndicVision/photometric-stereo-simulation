@@ -1,0 +1,24 @@
+{
+  "paths": {
+    "rendered_output_base": "C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\best_exposure_rendered_outputs",
+    "csv_output_base": "C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\blender_inverse_square_law_analysis\\dummy\\csvs",
+    "plot_output_base": "C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\blender_inverse_square_law_analysis\\dummy\\plots",
+    "light_matrix_dir": "C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\light_matrices"
+  },
+  "processing_settings": {
+    "exposure_method": "Aggregated_Mean_EV_Classical",
+    "background_threshold": 0.05,
+    "mask_erosion_iter": 2,
+    "target_light_ids": [1, 2, 3, 4],
+    "samples_per_axis": 30
+  },
+  "area_light_props": {
+    "dim_a_cm": 5.5,
+    "dim_b_cm": 5.5
+  },
+  "plot_settings": {
+    "dpi": 300,
+    "color_channel": "gray",
+    "show_outliers": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data_settings": {
+    "csv_path": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\blender_inverse_square_law_analysis\\plots\\area_grid_size_30\\samples_4096\\0.00_60.00_0.00_0.00_0.00_9.57\\4_20.00_area_rectangle_180.0_45.00_1.17\\light_002_Gray_stats.csv",
+    "x_column": "G_Value",
+    "y_column": "Q2_Mean",
+    "output_plot_path": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\blender_inverse_square_law_analysis\\plots\\area_grid_size_30\\samples_4096\\0.00_60.00_0.00_0.00_0.00_9.57\\4_20.00_area_rectangle_180.0_45.00_1.17\\light_002_Gray_LinearFit.png"
+  },
+  "plot_options": {
+    "title": "Intensity vs Geometric nT.G",
+    "x_label": "Geometric nT.G Value",
+    "y_label": "Pixel Intensity",
+    "show_raw_points": true,
+    "show_raw_curve": false,
+    "show_r_squared": true,
+    "show_rmse": true
+  },
+  "fit_settings": {
+    "use_linear_fit": true,
+    "pass_through_origin": false,
+    "line_color": "red",
+    "fit_label": "Linear Regression"
+  }
+}
