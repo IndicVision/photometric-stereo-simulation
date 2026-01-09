@@ -193,7 +193,7 @@ def process_configuration(scene, lights, temp_dir, final_dir, exposure_values):
     print(f"✓ All {total} images generated")
 # ---------------- MAIN ----------------
 def main():
-    config_path = r"C:\Users\vishn\Desktop\avanthik\blender_code\general_rendering\blender_parameters_fast_3.json"
+    config_path = r"C:\Users\vishn\Desktop\avanthik\bldr_cd\grl_rndr\main_fst_cfg.json"
     with open(config_path) as f:
         cfg = Config(json.load(f))
     setup_gpu(cfg)

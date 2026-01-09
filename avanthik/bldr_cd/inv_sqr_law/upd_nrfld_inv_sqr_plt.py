@@ -1,3 +1,4 @@
+# import necessary libraries
 import numpy as np
 import cv2
 import os
@@ -8,10 +9,13 @@ import matplotlib.ticker as ticker
 from pathlib import Path
 import cupy as cp
 
+# Define the main analysis class
 class IntensityGAnalyzerGPU:
-    def __init__(self, config_path):
-        with open(config_path, 'r') as f:
-            self.cfg = json.load(f)
+    
+    # Initialize with configuration path
+    def __init__(self, config_path): # input: path to configuration JSON file
+        with open(config_path, 'r') as f: # Load configuration from JSON file in read mode
+            self.cfg = json.load(f) # Store configuration in an instance variable
         
         self.input_base = Path(self.cfg['paths']['rendered_output_base'])
         self.csv_base = Path(self.cfg['paths']['csv_output_base'])
@@ -197,5 +201,5 @@ class IntensityGAnalyzerGPU:
             plt.close()
 
 if __name__ == "__main__":
-    CONFIG_PATH = r"C:\Users\vishn\Desktop\avanthik\blender_code\inverse_square_law_analysis\upd_nearfield_inverse_square_law_plot_config.json"
+    CONFIG_PATH = r"C:\Users\vishn\Desktop\avanthik\bldr_cd\inv_sqr_law\upd_nrfld_inv_sqr_plt_cfg.json"
     IntensityGAnalyzerGPU(CONFIG_PATH).process()

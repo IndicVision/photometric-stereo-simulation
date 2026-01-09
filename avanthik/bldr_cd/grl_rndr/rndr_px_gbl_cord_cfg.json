@@ -1,0 +1,21 @@
+{
+  "plane_configs": [
+    {
+      "azimuth_deg": 0.0,
+      "elevation_deg": 60.0,
+      "center_cm": [0.0, 0.0, 0.0],
+      "length_cm": 3.3,
+      "breadth_cm": 2.9
+    }
+  ],
+  "render": {
+    "engine": "CYCLES",
+    "device": "GPU",
+    "samples": 1,
+    "resolution_x": 1920,
+    "resolution_y": 1080
+  },
+  "paths": {
+    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\px_gbl_cord"
+  }
+}

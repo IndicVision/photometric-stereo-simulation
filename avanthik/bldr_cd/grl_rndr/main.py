@@ -92,7 +92,7 @@ def render(cfg, output_path, exposure, samples):
         bpy.ops.render.render(write_still=True)
 
 def main():
-    with open(r"C:\Users\vishn\Desktop\avanthik\blender_code\blender_parameters.json", 'r') as f:
+    with open(r"C:\Users\vishn\Desktop\avanthik\bldr_cd\grl_rndr\main_cfg.json", 'r') as f:
         cfg = Config(json.load(f))
     
     loops = cfg.get('global_loops')

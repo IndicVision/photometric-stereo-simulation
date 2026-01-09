@@ -218,13 +218,13 @@ def render_with_exposure(scene, lights, active_light, exposure, output_path):
 
 def main():
     with open(
-        r"C:\Users\vishn\Desktop\avanthik\blender_code\general_rendering\blender_parameters_fast_3.json",
+        r"C:\Users\vishn\Desktop\avanthik\bldr_cd\grl_rndr\main_fst_cfg.json",
         'r'
     ) as f:
         cfg = Config(json.load(f))
 
     with open(
-        r"C:\Users\vishn\Desktop\avanthik\blender_code\general_rendering\render_best_ev_fast_config.json",
+        r"C:\Users\vishn\Desktop\avanthik\bldr_cd\grl_rndr\rndr_bst_ev_fst_cfg.json",
         'r'
     ) as f:
         custom_cfg = CustomConfig(json.load(f))

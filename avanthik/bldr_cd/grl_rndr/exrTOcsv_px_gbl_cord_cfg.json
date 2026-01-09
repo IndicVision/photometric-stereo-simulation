@@ -1,0 +1,11 @@
+{
+  "paths": {
+    "input_root_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\px_gbl_cord_exr",
+    "output_csv_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\px_gbl_cord_csv"
+  },
+  "processing": {
+    "background_threshold": 1e-6,
+    "valid_pixels_only": true,
+    "csv_separator": ","
+  }
+}

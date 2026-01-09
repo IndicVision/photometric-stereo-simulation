@@ -7,7 +7,7 @@ from pathlib import Path
 import cupy as cp # GPU Acceleration
 import math
 
-CONFIG_PATH = r"C:\Users\vishn\Desktop\avanthik\blender_code\inverse_square_law_analysis\upd_nearfield_inverse_square_law_contour_config.json"
+CONFIG_PATH = r"C:\Users\vishn\Desktop\avanthik\bldr_cd\inv_sqr_law\upd_nrfld_inv_sqr_ctr_cfg.json"
 
 class GContourGeneratorGPU:
     def __init__(self, config_path):

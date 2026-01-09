@@ -94,9 +94,9 @@ def create_lights_and_setup(current_light_type, plane_center, loop_params, light
 
 def main():
     # Load configs
-    with open(r"C:\Users\vishn\Desktop\avanthik\blender_code\general_rendering\blender_parameters_fast_3.json", 'r') as f:
+    with open(r"C:\Users\vishn\Desktop\avanthik\bldr_cd\grl_rndr\main_cfg.json", 'r') as f:
         cfg = Config(json.load(f))
-    with open(r"C:\Users\vishn\Desktop\avanthik\blender_code\general_rendering\render_best_ev_config.json", 'r') as f:
+    with open(r"C:\Users\vishn\Desktop\avanthik\bldr_cd\grl_rndr\rndr_bst_ev_cfg.json", 'r') as f:
         custom_cfg = CustomConfig(json.load(f))
 
     df = pd.read_csv(custom_cfg.csv_path) #

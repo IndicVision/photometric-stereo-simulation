@@ -231,5 +231,5 @@ class HybridExposureOptimizer:
             df[[c for c in cols if c in df.columns]].to_csv(self.report_path, index=False)
 
 if __name__ == "__main__":
-    CONFIG_PATH = r"C:\Users\vishn\Desktop\avanthik\blender_code\general_rendering\upd_opt_exp_config.json"
+    CONFIG_PATH = r"C:\Users\vishn\Desktop\avanthik\bldr_cd\grl_rndr\upd_opt_exp_cfg.json"
     HybridExposureOptimizer(CONFIG_PATH).run_pipeline()

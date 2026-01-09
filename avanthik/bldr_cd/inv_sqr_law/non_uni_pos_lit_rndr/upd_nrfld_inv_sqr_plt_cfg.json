@@ -1,9 +1,9 @@
 {
   "paths": {
-    "rendered_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\non_uni_pos_lit_rndr\\oth_bldr_als\\nrfld_als\\dmy_strg\\bst_exp_rndr_op",
-    "csv_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\err_als_strg\\bldr_inv_sqr_law\\non_uni_pos_lit_strg\\type_01\\csv\\area_gdsiz_30",
-    "plot_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\err_als_strg\\bldr_inv_sqr_law\\non_uni_pos_lit_strg\\type_01\\plt\\area_gdsiz_30",
-    "light_matrix_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\non_uni_pos_lit_rndr\\oth_bldr_als\\nrfld_als\\dmy_strg\\lit_matr"
+    "rendered_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\non_uni_pos_lit_rndr\\oth_bldr_als\\nrfld_als\\type_02\\4096_180\\bst_exp_rndr_op",
+    "csv_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\err_als_strg\\bldr_inv_sqr_law\\non_uni_pos_lit_strg\\type_02\\4096_180\\csv\\area_gdsiz_30",
+    "plot_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\err_als_strg\\bldr_inv_sqr_law\\non_uni_pos_lit_strg\\type_02\\4096_180\\plt\\area_gdsiz_30",
+    "light_matrix_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\non_uni_pos_lit_rndr\\oth_bldr_als\\nrfld_als\\type_02\\4096_180\\lit_matr"
   },
   "processing_settings": {
     "exposure_method": "Aggregated_Mean_EV_Classical",
