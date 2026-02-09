@@ -1,0 +1,47 @@
+{
+  "plane_configs": [
+    {
+      "azimuth_deg": 0.0,
+      "elevation_deg": 90.0,
+      "center_cm": [0.05, 0.05, 0.0],
+      "length_cm": 2.6,
+      "breadth_cm": 2.1
+    }
+  ],
+  "light_rig": {
+    "coordinates_cm": [
+        [-6.1828, -0.2693, 7.3561],
+        [0.2693, -6.1828, 7.3561],
+        [ 6.1828, 0.2693, 7.3561],
+        [-0.2693, 6.1828, 7.3561]
+    ],
+    "tilt_angles_deg": [39.0, 39.0, 39.0, 39.0],
+    "calibrated_power_w": [0.4, 0.4, 0.4, 0.4],
+    "light_ids": [1, 4, 7, 10]
+  },
+  "light_spec": {
+    "luminous_flux_lm": 120.0,
+    "luminous_efficacy_lm_w": 300.0,
+    "beam_angle_deg": 180.0,
+    "shape": "DISK",
+    "size_mm": 6.0
+  },
+  "exposure": {
+    "start": 0.08,
+    "end": 0.08,
+    "step": 0.08
+  },
+  "render": {
+    "engine": "CYCLES",
+    "device": "GPU",
+    "compute_device": "CUDA",
+    "samples": 4096,
+    "max_bounces": 0,
+    "resolution_x": 6240,
+    "resolution_y": 4160
+  },
+  "paths": {
+    "base_output_dir": "C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_2\\lit_set_1_4_7_10_offset_0.05_0.05_0.00",
+    "json_config_path": "C:\\Users\\vishn\\Desktop\\avanthik\\bldr_cd\\protype_2\\model_1_cfg.json"
+  }
+}

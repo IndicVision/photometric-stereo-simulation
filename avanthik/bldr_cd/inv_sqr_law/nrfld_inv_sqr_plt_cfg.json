@@ -1,16 +1,24 @@
+
 {
   "paths": {
-    "rendered_output_base": "C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\best_exposure_rendered_outputs",
-    "csv_output_base": "C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\blender_inverse_square_law_analysis\\dummy\\csvs",
-    "plot_output_base": "C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\blender_inverse_square_law_analysis\\dummy\\plots",
-    "light_matrix_dir": "C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\light_matrices"
+    "rendered_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\oth_bldr_als\\nrfld_als\\4098_180\\bst_exp_rndr_op",
+    "world_coordinate_csv_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\px_gbl_cord_csv",
+    "csv_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\err_als_strg\\bldr_inv_sqr_law\\4096_180\\csv\\area_gdsiz_30",
+    "plot_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\err_als_strg\\bldr_inv_sqr_law\\4096_180\\plt\\area_gdsiz_30",
+    "light_matrix_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\oth_bldr_als\\nrfld_als\\4098_180\\lit_matr"
+  },
+  "resolution": {
+    "width": 1920,
+    "height": 1080
   },
   "processing_settings": {
     "exposure_method": "Aggregated_Mean_EV_Classical",
-    "background_threshold": 0.05,
-    "mask_erosion_iter": 2,
     "target_light_ids": [1, 2, 3, 4],
-    "samples_per_axis": 30
+    "samples_per_axis": 30,
+    "num_g_plot_samples": 20,
+    "alpha_threshold": 0.5,
+    "discard_irrelevant_l_vectors": true,
+    "use_blender_energy_scaling": true
   },
   "area_light_props": {
     "dim_a_cm": 5.5,
@@ -18,7 +26,7 @@
   },
   "plot_settings": {
     "dpi": 300,
-    "color_channel": "gray",
+    "color_channel": "Gray",
     "show_outliers": false
   }
 }

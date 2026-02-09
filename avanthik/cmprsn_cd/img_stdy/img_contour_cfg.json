@@ -1,0 +1,28 @@
+{
+    "input_files": [
+        "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\nrml_op\\otsu\\error_degree_map_cropped.png"
+    ],
+    "output_directory": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\nrml_op\\otsu",
+    
+    "preprocessing": {
+        "enable_blur": true,
+        "blur_kernel_size": 20
+    },
+
+    "visualization": {
+        "colormap": "jet",
+        "_options": ["viridis", "plasma", "inferno", "magma", "cividis", "jet", "tab20"],
+        "line_width": 0.5,
+        "show_colorbar": true,
+        "dpi": 150
+    },
+
+    "levels": {
+        "mode": "auto", 
+        "number_of_levels": 20,
+        "manual_range": {
+            "min": 50,
+            "max": 200
+        }
+    }
+}

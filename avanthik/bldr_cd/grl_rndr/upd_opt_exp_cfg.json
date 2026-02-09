@@ -1,8 +1,8 @@
 {
   "paths": {
-    "input_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\intermediate_storage\\multi_exposure_rendered_outputs",
-    "output_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\intermediate_storage\\best_exposure_calculation_outputs",
-    "light_matrix_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\intermediate_storage\\light_matrices",
+    "input_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_3\\flat_pln\\all_data\\sprd140_psi45\\mlt_exp_rndr_op",
+    "output_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_3\\flat_pln\\all_data\\sprd140_psi45\\bst_exp_cal_op",
+    "light_matrix_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_3\\flat_pln\\all_data\\sprd140_psi45\\lit_matr",
     "report_filename": "Optimization_Report.csv"
   },
   "plotting": {

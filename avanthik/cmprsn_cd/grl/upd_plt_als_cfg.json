@@ -1,14 +1,14 @@
 {
   "paths": {
-    "normal_map_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\main_storage\\area_grid_size_30\\other_analysis_outputs",
-    "plot_output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\comparison_outputs\\spread_analysis"
+    "normal_map_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\protype_3\\dis_als\\flat_pln\\sprd180_psi45\\areaSmpl_30_30",
+    "plot_output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmprsn_op\\protype_3\\dist_als\\nrml_err\\mean_err\\bldr_smpl"
   },
   "plot_specs": [
     {
-      "plot_name": "Error_vs_Distance_by_Spread",
+      "plot_name": "Error_vs_Distance",
       "x_axis": "dist",
-      "y_axis": "mean_error",
-      "group_by": "spread",
+      "y_axis": "mean_error_deg",
+      "group_by": "samples",
       "fixed_params": {
         "num_l": 4,
         "energy": 1.17

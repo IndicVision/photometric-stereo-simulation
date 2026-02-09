@@ -1,19 +1,33 @@
+
 {
   "paths": {
-    "rendered_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\intermediate_storage\\best_exposure_rendered_outputs",
-    "csv_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\blender_inverse_square_law_analysis\\csvs\\area_grid_size_30",
-    "plot_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\blender_inverse_square_law_analysis\\plots\\area_grid_size_30",
-    "light_matrix_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\intermediate_storage\\light_matrices"
+    "rendered_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\oth_bldr_als\\nrfld_als\\4096_30\\bst_exp_rndr_op",
+    "world_coordinate_csv_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\px_gbl_cord_csv",
+    "csv_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\err_als_strg\\bldr_inv_sqr_law\\4096_30\\csv\\area_gdsiz_30",
+    "plot_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\err_als_strg\\bldr_inv_sqr_law\\4096_30\\plt\\area_gdsiz_30",
+    "light_matrix_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\oth_bldr_als\\nrfld_als\\4096_30\\lit_matr"
+  },
+  "resolution": {
+    "width": 1920,
+    "height": 1080
   },
   "processing_settings": {
     "exposure_method": "Aggregated_Mean_EV_Classical",
-    "background_threshold": 0.05,
-    "mask_erosion_iter": 2,
     "target_light_ids": [1, 2, 3, 4],
     "samples_per_axis": 30,
-    "num_g_plot_samples": 20,
+    "alpha_threshold": 0.5,
     "discard_irrelevant_l_vectors": true,
-    "use_blender_energy_scaling": true
+
+    "//NOTE_01": "Set use_blender_energy_scaling to FALSE always",
+    "use_blender_energy_scaling": false,
+
+    "//NOTE_02": "Set gamma_correction to 1.0 always. Only modify if the not baking the raw outputs from Blender",
+    "gamma_correction": 1.0
+  },
+  "curve_fitting": {
+    "polynomial_degree": 1,
+    "fit_strategy": "Binned_Mean",
+    "fitting_bins": 100
   },
   "area_light_props": {
     "dim_a_cm": 5.5,
@@ -22,6 +36,6 @@
   "plot_settings": {
     "dpi": 300,
     "color_channel": "Gray",
-    "show_outliers": false
+    "heatmap_bins": 100
   }
 }

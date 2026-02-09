@@ -1,0 +1,20 @@
+{
+  "paths": {
+    "base_search_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\err_als_strg\\bldr_inv_sqr_law\\4096_30\\plt\\area_gdsiz_30",
+    "ev_report_path": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\oth_bldr_als\\nrfld_als\\4096_30\\bst_exp_cal_op\\Aggregated_EV_Report.csv"
+  },
+  "processing": {
+    "target_csv_suffix": "_Poly1.csv",
+    "exposure_method": "Aggregated_Mean_EV_Classical"
+  },
+  "physics_constants": {
+    "rho": 0.8,
+    "bit_depth": 8,
+    "light_dim_a_cm": 5.5,
+    "light_dim_b_cm": 5.5
+  },
+  "plot_settings": {
+    "data_color": "blue",
+    "reference_color": "red"
+  }
+}

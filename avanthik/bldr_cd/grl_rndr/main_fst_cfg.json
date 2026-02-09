@@ -2,10 +2,10 @@
   "plane_configs": [
     {
       "azimuth_deg": 0.0,
-      "elevation_deg": 60.0,
+      "elevation_deg": 90.0,
       "center_cm": [0.0, 0.0, 0.0],
-      "length_cm": 3.3,
-      "breadth_cm": 2.9
+      "length_cm": 2.6,
+      "breadth_cm": 2.1
     }
   ],
   "global_loops": {
@@ -18,12 +18,12 @@
   },
   "light": {
     "area_light": {
-      "spread_angles_deg": [180.0],
+      "spread_angles_deg": [140.0],
       "dimensions": [
         {
           "shape": "RECTANGLE",
-          "dim_a_cm": 5.5,
-          "dim_b_cm": 5.5
+          "dim_a_cm": 5.36,
+          "dim_b_cm": 5.36
         }
       ]
     },
@@ -38,9 +38,9 @@
     }
   },
   "exposure": {
-    "start": 0.04,
-    "end": 0.80,
-    "step": 0.04
+    "start": 0.006,
+    "end": 0.6,
+    "step": 0.006
   },
   "render": {
     "engine": "CYCLES",
@@ -74,6 +74,6 @@
     "render_scene": true
   },
   "paths": {
-    "base_output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\intermediate_storage\\multi_exposure_rendered_outputs"
+    "base_output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_3\\flat_pln\\all_data\\sprd140_psi45\\mlt_exp_rndr_op"
   }
 }

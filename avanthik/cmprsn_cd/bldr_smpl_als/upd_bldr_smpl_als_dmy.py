@@ -6,7 +6,7 @@ import json
 import matplotlib.pyplot as plt
 from pathlib import Path
 
-CONFIG_PATH = r"C:\Users\vishn\Desktop\avanthik\comparison_code\blender_sample_analysis_codes\upd_blender_sample_analysis_dummy_config.json"
+CONFIG_PATH = r"C:\Users\vishn\Desktop\avanthik\cmprsn_cd\bldr_smpl_als\upd_bldr_smpl_als_dmy_cfg.json"
 
 def load_config(path):
     with open(path, 'r') as f:

@@ -1,25 +1,39 @@
 
-
 {
   "paths": {
-    "renders_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\intermediate_storage\\best_exposure_rendered_outputs",
-    "light_matrix_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\intermediate_storage\\light_matrices",
-    "reconstruction_output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\main_storage\\area_grid_size_30\\other_analysis_outputs"
+    "renders_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_3\\flat_pln\\all_data\\sprd180_psi90\\bst_exp_rndr_op",
+    "light_matrix_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_3\\flat_pln\\all_data\\sprd180_psi90\\lit_matr",
+    "reconstruction_output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\protype_3\\psi_als\\flat_pln\\sprd180_psi90\\areaSmpl_30_30\\dummy2",
+    "world_coordinate_csv_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\px_gbl_cord_csv\\protype_3",
+    "exposure_report_csv_path": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_3\\flat_pln\\all_data\\sprd180_psi90\\bst_exp_cal_op\\Aggregated_EV_Report.csv"
+  },
+  "resolution": {
+    "width": 6240,
+    "height": 4160
   },
   "analysis_settings": {
     "exposure_method": "Aggregated_Mean_EV_Classical"
   },
   "area_light_props": {
-    "dim_a_cm": 5.5,
-    "dim_b_cm": 5.5
+    "dim_a_cm": 4.5,
+    "dim_b_cm": 4.5
   },
   "reconstruction_settings": {
-    "base_albedo_constant": 80.0,
-    "samples_per_axis": 30,
-    "background_threshold": 0.05,
-    "mask_erosion_iter": 2,
+    "base_albedo_constant": 0.8,
+    "bit_depth": 8,
+    "samples_per_axis": [30, 30],
+    "alpha_threshold": 0.5,
+    
+    "//NOTE_01": "Set gamma_correction to 1.0 always. Only modify if the not baking the raw outputs from Blender",
+    "gamma_correction": 1.0,
+
     "discard_irrelevant_l_vectors": true,
-    "use_blender_energy_scaling": true
+
+    "//NOTE_02": "Set use_blender_energy_scaling to FALSE always",
+    "use_blender_energy_scaling": false,
+
+    "//NOTE_03": "Set use_blender_energy_scaling to TRUE if object will always have Z in the upward direction",
+    "force_positive_z": true
   },
   "outputs": {
     "save_error_heatmap": true,

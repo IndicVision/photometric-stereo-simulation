@@ -1,0 +1,19 @@
+{
+  "paths": {
+    "input_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_gamma\\cropped",
+    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_gamma\\cropped\\histogram"
+  },
+  "settings": {
+    "histogram_mode": "grayscale",
+    "_comment_mode": "Options: 'rgb' (3 channels) or 'grayscale' (1 channel luminance).",
+
+    "use_mask": false,
+    "_comment_mask": "If true, uses Otsu method to ignore background pixels (prevents huge spikes at 0).",
+    
+    "combine_plots": false,
+    "_comment_combine": "If true, saves ONE image with all histograms overlaid. If false, saves separate images.",
+    
+    "y_limit": null,
+    "_comment_limit": "Set a number (e.g., 5000) to fix height, or null for auto-scale."
+  }
+}

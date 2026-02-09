@@ -484,7 +484,7 @@ def main():
     }
     
     # --- Load Configuration ---
-    CONFIG_FILE_PATH = r"C:\Users\vishn\Desktop\avanthik\normal_map_code\normal_map_config.json"
+    CONFIG_FILE_PATH = r"C:\Users\vishn\Desktop\avanthik\nrml_mp_cd\nrml_mp_cfg.json"
     try:
         with open(CONFIG_FILE_PATH, 'r') as f:
             ps_cfg = json.load(f)

@@ -84,6 +84,6 @@ class ReconstructionComparator:
 
 if __name__ == "__main__":
     # Ensure this points to your config file
-    CONFIG_PATH = r"C:\Users\vishn\Desktop\avanthik\comparison_code\upd_plot_analysis_config.json"
+    CONFIG_PATH = r"C:\Users\vishn\Desktop\avanthik\cmprsn_cd\grl\upd_plt_als_cfg.json"
     comparator = ReconstructionComparator(CONFIG_PATH)
     comparator.run_analysis()

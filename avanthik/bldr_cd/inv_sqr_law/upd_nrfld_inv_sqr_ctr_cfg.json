@@ -1,27 +1,15 @@
-
-
 {
   "paths": {
     "rendered_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\intermediate_storage\\best_exposure_rendered_outputs",
     "csv_input_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\blender_inverse_square_law_analysis\\csvs\\area_grid_size_30",
-    "contour_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\blender_inverse_square_law_analysis\\contours\\area_grid_size_30",
-    "light_matrix_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\other_blender_analysis_outputs\\near_field_analysis_outputs\\intermediate_storage\\light_matrices"
+    "contour_output_base": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\blender_inverse_square_law_analysis\\contours\\area_grid_size_30"
   },
   "processing_settings": {
     "exposure_method": "Aggregated_Mean_EV_Classical",
-    "background_threshold": 0.05,
-    "mask_erosion_iter": 2,
     "target_light_ids": [1, 2, 3, 4],
-    "samples_per_axis": 30,
     "num_g_plot_samples": 20,
     "threshold_mode": "IQR", 
-    "intensity_threshold_value": 4.0,
-    "discard_irrelevant_l_vectors": true,
-    "use_blender_energy_scaling": true
-  },
-  "area_light_props": {
-    "dim_a_cm": 5.5,
-    "dim_b_cm": 5.5
+    "intensity_threshold_value": 4.0
   },
   "contour_visuals": {
     "good_color_bgr": [0, 255, 0],

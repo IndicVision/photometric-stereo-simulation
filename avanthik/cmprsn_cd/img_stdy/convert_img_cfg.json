@@ -1,0 +1,37 @@
+{
+  "io_settings": {
+    "input_path": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\light_004.CR2",
+    "output_folder": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear",
+    "output_filename": "light_004"
+  },
+
+  "target_format": {
+    "extension": ".png",
+    "bit_depth": 16,
+    "dtype": "uint16"
+  },
+
+  "blind_raw_settings": {
+    "_comment": "Only required if input file is .raw (binary stream)",
+    "width": 1920,
+    "height": 1080,
+    "channels": 1,
+    "dtype": "uint8"
+  },
+
+  "processing_pipeline": {
+    "demosaic_raw": true,
+    
+    "color_management": {
+      "_comment_modes": "Use 'none' if Raw->PNG (Visual). Use 'srgb_to_linear' if Raw->EXR (Data). Use 'linear_to_srgb' if EXR->PNG.",
+      "mode": "none", 
+      "gamma_value": 1.0
+    },
+
+    "tone_mapping": {
+      "_comment": "Enable this if converting EXR/HDR (Linear) to PNG/JPG (Standard) to prevent clipping.",
+      "enable": false,
+      "method": "simple_reinhard"
+    }
+  }
+}

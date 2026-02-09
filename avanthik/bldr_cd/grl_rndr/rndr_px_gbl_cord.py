@@ -19,40 +19,53 @@ def load_config(path):
         return json.load(f)
 
 def setup_render_environment(cfg):
-    """Configures the scene for data output (RAW color, 32-bit float)."""
+    """Configures the scene for exact coordinate data output."""
     scene = bpy.context.scene
     
-    # Engine Settings
+    # --- Engine Settings ---
     scene.render.engine = 'CYCLES'
     scene.cycles.device = cfg['render']['device']
     scene.cycles.samples = cfg['render']['samples']  
     scene.cycles.use_denoising = False
     
-    # SAFETY: Disable Anti-Aliasing interpolation
-    # 'BOX' filter with 1 sample ensures the pixel value is exactly the geometry center
-    # without averaging adjacent background pixels.
-    scene.cycles.pixel_filter_type = 'BOX'
+    # --- CRITICAL: Coordinate Accuracy Fixes ---
     
-    # GPU Setup
+    # 1. Disable Exposure Scaling
+    # Ensures pixel values are not multiplied by a global exposure factor
+    scene.cycles.film_exposure = 1.0
+    
+    # 2. Minimize Anti-Aliasing Smearing
+    # 'BOX' filter with width 0.01 acts like a point sampler.
+    # It prevents the object coordinate from blending with the background coordinate.
+    scene.cycles.pixel_filter_type = 'BOX'
+    scene.cycles.filter_width = 0.01
+    
+    # 3. Enable Alpha/Transparency
+    # Essential for distinguishing "Zero Coordinate" from "Empty Background"
+    scene.render.film_transparent = True
+    
+    # --- GPU Setup ---
     prefs = bpy.context.preferences
     cprefs = prefs.addons["cycles"].preferences
     cprefs.compute_device_type = "CUDA"
     for d in cprefs.devices:
         d.use = True
 
-    # Resolution
+    # --- Resolution ---
     scene.render.resolution_x = cfg['render']['resolution_x']
     scene.render.resolution_y = cfg['render']['resolution_y']
     scene.render.resolution_percentage = 100
 
-    # CRITICAL: Data Format Settings ('Raw' view transform)
+    # --- Color Management ---
+    # 'Raw' ensures no gamma correction is applied to the coordinate data
     scene.view_settings.view_transform = 'Raw'
     scene.view_settings.look = 'None'
     
-    # Output: OpenEXR Float (Full 32-bit)
+    # --- Output Format ---
+    # OPEN_EXR Float (Full 32-bit) with RGBA to store transparency
     scene.render.image_settings.file_format = 'OPEN_EXR'
     scene.render.image_settings.color_depth = '32'
-    scene.render.image_settings.color_mode = 'RGB'
+    scene.render.image_settings.color_mode = 'RGBA' # Changed from RGB to RGBA
     scene.render.image_settings.exr_codec = 'ZIP' 
 
 # ==========================================
@@ -142,7 +155,7 @@ def main():
     res_x = cfg['render']['resolution_x']
     res_y = cfg['render']['resolution_y']
     
-    # Create the resolution-specific folder name: "500_500"
+    # Create the resolution-specific folder name
     res_folder_name = f"{res_x}_{res_y}"
     
     print(f"\nSTARTING GEOMETRY EXPORT ({res_folder_name})...")

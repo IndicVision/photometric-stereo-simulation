@@ -250,7 +250,7 @@ def generate_plots(df_master: pd.DataFrame, config: Dict):
 
 def main():
     # Path to the new configuration file (Adjust this path!)
-    CONFIG_FILE_PATH = r"c:\Users\vishn\Desktop\avanthik\comparison_code\plot_analysis_config.json"
+    CONFIG_FILE_PATH = r"C:\Users\vishn\Desktop\avanthik\cmprsn_cd\grl\plt_als_cfg.json"
     
     try:
         with open(CONFIG_FILE_PATH, 'r') as f:

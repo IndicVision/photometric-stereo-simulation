@@ -1,8 +1,8 @@
 import pandas as pd
 
 # Define the input and output file names
-input_file = r"C:\Users\vishn\Desktop\avanthik\blender_outputs\other_blender_analysis_outputs\near_field_analysis_outputs\intermediate_storage\best_exposure_calculation_outputs\Optimization_Report.csv"
-output_file = r"C:\Users\vishn\Desktop\avanthik\blender_outputs\other_blender_analysis_outputs\near_field_analysis_outputs\intermediate_storage\best_exposure_calculation_outputs\Aggregated_EV_Report.csv"
+input_file = r"C:\Users\vishn\Desktop\avanthik\bldr_op\protype_3\flat_pln\all_data\sprd140_psi45\bst_exp_cal_op\Optimization_Report.csv"
+output_file = r"C:\Users\vishn\Desktop\avanthik\bldr_op\protype_3\flat_pln\all_data\sprd140_psi45\bst_exp_cal_op\Aggregated_EV_Report.csv"
 
 # 1. Read the input CSV file
 df_in = pd.read_csv(input_file)

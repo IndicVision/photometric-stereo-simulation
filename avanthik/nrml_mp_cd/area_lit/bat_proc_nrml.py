@@ -205,6 +205,6 @@ class DirectoryNormalProcessor:
 
 if __name__ == "__main__":
     # Ensure this path is correct for your system
-    config_file = r"C:\Users\vishn\Desktop\avanthik\normal_map_code\batch_process_normals_config.json"
+    config_file = r"C:\Users\vishn\Desktop\avanthik\nrml_mp_cd\area_lit\bat_proc_nrml_cfg.json"
     processor = DirectoryNormalProcessor(config_file)
     processor.process()
