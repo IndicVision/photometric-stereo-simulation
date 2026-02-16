@@ -2,12 +2,18 @@
   "paths": {
     "world_coordinate_csv": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\mask_op\\otsu\\object_mapping.csv",
     "image_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped",
-    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\nrml_op\\otsu\\area_sampl_70x70"
+    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\nrml_op\\otsu\\area_sampl_30x30"
   },
   "global_settings": {
     "system_units": "m",
     "apply_dark_threshold": false,
-    "dark_threshold_value": 0.02
+    "dark_threshold_value": 0.02,
+    
+    "binning": {
+      "enabled": true,
+      "cell_size": [5, 5],
+      "_comment_binning": "cell_size is [width, height] in pixels. Each cell is treated as one pixel with averaged intensity."
+    }
   },
   "camera": {
     "use_auto_center": true,
@@ -32,7 +38,7 @@
       "norm_dir": [-1.0, 0.0, 0.0],
       "dims_m": [0.0536, 0.0536],
       "radius_m": 0.006,
-      "sampling": [70, 70], 
+      "sampling": [30, 30], 
       "gamma": 1.0,
       "bit_depth": 16,
       "spread_deg": 180.0
@@ -45,7 +51,7 @@
       "norm_dir": [0.0, -1.0, 0.0],
       "dims_m": [0.0536, 0.0536],
       "radius_m": 0.006,
-      "sampling": [70, 70], 
+      "sampling": [30, 30], 
       "gamma": 1.0,
       "bit_depth": 16,
       "spread_deg": 180.0
@@ -58,7 +64,7 @@
       "norm_dir": [1.0, 0.0, 0.0],
       "dims_m": [0.0536, 0.0536],
       "radius_m": 0.006,
-      "sampling": [70, 70], 
+      "sampling": [30, 30], 
       "gamma": 1.0,
       "bit_depth": 16,
       "spread_deg": 180.0
@@ -71,7 +77,7 @@
       "norm_dir": [0.0, 1.0, 0.0],
       "dims_m": [0.0536, 0.0536],
       "radius_m": 0.006,
-      "sampling": [70, 70], 
+      "sampling": [30, 30], 
       "gamma": 1.0,
       "bit_depth": 16,
       "spread_deg": 180.0

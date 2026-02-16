@@ -4,14 +4,14 @@ import cv2
 import numpy as np
 
 # --- CONFIGURATION -----------------------------------------------------------
-INPUT_PATH = r"C:\Users\vishn\Desktop\avanthik\cmr_op\basler\simulation_003\cr2_cmr_op\cr2_TO_png_linear\cropped\nrml_op\otsu\error_degree_map.png"  # Change to any file
-OUTPUT_PATH = r"C:\Users\vishn\Desktop\avanthik\cmr_op\basler\simulation_003\cr2_cmr_op\cr2_TO_png_linear\cropped\nrml_op\otsu\error_degree_map_cropped.png"
+INPUT_PATH = r"C:\Users\vishn\Desktop\avanthik\cmr_op\basler\exact_basler\bldr_op\theor_op\png_16bit\area_sampl_200x200\light_004.png"  # Change to any file
+OUTPUT_PATH = r"C:\Users\vishn\Desktop\avanthik\cmr_op\basler\exact_basler\bldr_op\theor_op\png_16bit\area_sampl_200x200\cropped\light_004.png"  # Change to desired output path (extension determines format)
 
 # Crop Settings (Coordinates based on the "Native/Sensor" orientation)
-CROP_X = 501
-CROP_Y = 431
-CROP_W = 1119
-CROP_H = 737
+CROP_X = 1004
+CROP_Y = 654
+CROP_W = 91
+CROP_H = 91
 
 # --- INTENSITY CONTROL SETTINGS ---
 # RAW files only: How should we "develop" the sensor data?

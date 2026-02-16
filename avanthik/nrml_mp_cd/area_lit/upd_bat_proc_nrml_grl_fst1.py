@@ -11,6 +11,27 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+# --- OPTIMIZATION START: Fused Kernels ---
+
+@cp.fuse()
+def fused_safe_sqrt(dist_sq):
+    """
+    Combines square root and safety clamping.
+    """
+    return cp.maximum(cp.sqrt(dist_sq), 1e-8)
+
+@cp.fuse()
+def fused_compute_weight(cos_emit, cos_half_spread, dist_sq):
+    """
+    Combines spread check, clamping, and inverse square law weighting.
+    FIX: Removed 'type(cos_emit)(0)' which caused the crash. 
+         Used simple scalar '0' which CuPy handles automatically.
+    """
+    # Simply using 0 works because CuPy broadcasts scalars in fused kernels correctly.
+    return (cp.maximum(0, cos_emit) * (cos_emit >= cos_half_spread)) / dist_sq
+
+# --- OPTIMIZATION END ---
+
 class GeneralizedNormalProcessor:
     def __init__(self, config_path):
         with open(config_path, 'r') as f:
@@ -28,10 +49,9 @@ class GeneralizedNormalProcessor:
             img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         
         # Normalize to 0.0 - 1.0 (float32)
-        # Using (2**bit_depth - 1) ensures precise scaling for 8/16-bit
         img = img.astype(np.float32) / (2**bit_depth - 1)
         
-        # Apply Gamma Correction (Linearization)
+        # Apply Gamma Correction
         if gamma != 1.0:
             img = np.power(img, gamma)
             
@@ -40,12 +60,11 @@ class GeneralizedNormalProcessor:
     def get_light_samples_gpu(self, light_cfg, P_surf_full, chunk_size=25000):
         """
         Calculates the accumulated light vector G for area lights.
-        CORRECTION: Returns the raw irradiance vector (Magnitude = Intensity),
-        preserving the inverse-square law logic.
+        OPTIMIZED: Uses cp.fuse() kernels for element-wise math.
         """
         pos = np.array(light_cfg['pos_m'])
         dims = np.array(light_cfg['dims_m'])
-        norm = np.array(light_cfg['norm_dir']) # Light normal (pointing OUT of light)
+        norm = np.array(light_cfg['norm_dir']) 
         samples = light_cfg['sampling']
         spread_deg = light_cfg.get('spread_deg', 180.0)
 
@@ -69,43 +88,34 @@ class GeneralizedNormalProcessor:
         num_pixels = P_surf_full.shape[0]
         G_eff_full = cp.zeros((num_pixels, 3), dtype=cp.float32)
 
-        # 2. Batch processing loop (to save GPU VRAM)
+        # 2. Batch processing loop
         for i in range(0, num_pixels, chunk_size):
             end = min(i + chunk_size, num_pixels)
-            P_chunk = P_surf_full[i:end] # Shape (Batch, 3)
+            P_chunk = P_surf_full[i:end] 
 
             # Vector from Surface Pixel -> Light Sample
             # Shape: (Num_Light_Samples, Batch_Size, 3)
             vec_surf_to_light = sample_pts_gpu[:, None, :] - P_chunk[None, :, :]
             
-            # Distance Squared and Distance
+            # Distance Squared
             dist_sq = cp.sum(vec_surf_to_light**2, axis=2)
-            dist = cp.sqrt(dist_sq)
-            dist = cp.maximum(dist, 1e-8) # Avoid div by zero
+            
+            # [OPTIMIZED] Fused Sqrt + Max
+            dist = fused_safe_sqrt(dist_sq)
             
             # Unit Direction (Surface -> Light)
             dir_surf_to_light = vec_surf_to_light / dist[:, :, None]
 
             # 3. Emission Calculation
-            # Dot product between Light Normal and Vector leaving the light
-            # Since our vector is Surface->Light, we want dot(LightNorm, -Direction)
             cos_emit = -cp.sum(dir_surf_to_light * norm_gpu, axis=2)
             
-            # 4. Spotlight / Spread Logic (New Check)
-            # If the angle is wider than the spread, contribution is 0
-            valid_emit = (cos_emit >= cos_half_spread)
-            cos_emit = cp.maximum(0, cos_emit)
-
-            # 5. Inverse Square Law Weighting
-            # Weight = (EmissionCosine * Visibility) / DistanceSquared
-            weight = (cos_emit * valid_emit) / dist_sq
+            # [OPTIMIZED] Fused Logic
+            weight = fused_compute_weight(cos_emit, cos_half_spread, dist_sq)
             
             # 6. Integrate
-            # Accumulate: UnitVector * Weight
-            # Result: A vector pointing to light, with magnitude proportional to total received irradiance
             G_chunk = cp.sum(dir_surf_to_light * weight[:, :, None], axis=0)
             
-            # Normalize by number of samples to keep units consistent (average irradiance density)
+            # Normalize
             G_eff_full[i:end] = G_chunk / sample_pts_gpu.shape[0]
             
             cp.get_default_memory_pool().free_all_blocks()
@@ -113,12 +123,12 @@ class GeneralizedNormalProcessor:
         return G_eff_full
 
     def run(self):
-        print("Executing Corrected Normal Reconstruction...")
+        print("Executing Corrected Normal Reconstruction (Optimized with Fused Kernels)...")
         
         # --- TIMER START: TOTAL ---
         t_start_total = time.time()
 
-        # 1. Load CSV Mapping (The Ground Truth Geometry)
+        # 1. Load CSV Mapping
         t0 = time.time()
         csv_path = Path(self.cfg['paths']['world_coordinate_csv'])
         if not csv_path.exists():
@@ -129,14 +139,12 @@ class GeneralizedNormalProcessor:
         u_idx = df['pixel_u'].values.astype(int)
         v_idx = df['pixel_v'].values.astype(int)
         
-        # Load Surface Points (Global Frame) - TRUSTING CSV (No Inversion)
         P_surf = cp.array(df[['x_world', 'y_world', 'z_world']].values, dtype=cp.float32)
-        cp.cuda.Device(0).synchronize() # Wait for GPU upload
+        cp.cuda.Device(0).synchronize()
         print(f"  [Time] Geometry Loading: {time.time() - t0:.4f} sec")
 
-        # 2. Extract Offsets for Stats
+        # 2. Extract Offsets
         cam_u, cam_v = self.cfg['camera']['manual_center_pixel']
-        # Find index closest to (0,0) in X,Y world to define "object center"
         center_idx = ((df['x_world'])**2 + (df['y_world'])**2).idxmin()
         obj_u = int(df.loc[center_idx, 'pixel_u'])
         obj_v = int(df.loc[center_idx, 'pixel_v'])
@@ -160,49 +168,37 @@ class GeneralizedNormalProcessor:
             img_path = Path(self.cfg['paths']['image_dir']) / l_cfg['file_name']
             img_gpu = self.load_image(img_path, l_cfg['gamma'], l_cfg['bit_depth'])
             
-            # Extract intensities at valid pixels
             I[:, j] = img_gpu[v_idx, u_idx]
             
-            # Compute Geometry Matrix (G)
             G[:, j, :] = self.get_light_samples_gpu(l_cfg, P_surf)
             
             del img_gpu
             cp.get_default_memory_pool().free_all_blocks()
 
-            # Sync to get accurate per-light time
             cp.cuda.Device(0).synchronize()
             print(f"  > Light {l_cfg['id']} processed in {time.time() - t_light_single:.4f} sec")
         
         cp.cuda.Device(0).synchronize()
         print(f"  [Time] Total Light Processing: {time.time() - t_lights_start:.4f} sec")
 
-        # 5. Solve Photometric Stereo (Robust Least Squares)
+        # 5. Solve Photometric Stereo
         print(" Solving linear system with regularization...")
         t_solve_start = time.time()
-        # Transpose G to (Pixels, 3, Lights)
-        GT = G.transpose(0, 2, 1) 
         
-        # GTG = G_transpose * G
+        GT = G.transpose(0, 2, 1) 
         GTG = cp.matmul(GT, G)
         
-        # Add Regularization (Lambda * Identity) to diagonal
-        # This prevents crashes when pixels are very dark or G is ill-conditioned
         lambda_reg = 1e-4
         GTG = GTG + (cp.eye(3, dtype=cp.float32) * lambda_reg)
         
-        # GTI = G_transpose * I
         GTI = cp.matmul(GT, I[:, :, None])
-        
-        # Normal = inv(GTG) * GTI
         inv_GTG = cp.linalg.inv(GTG)
         n_est = cp.matmul(inv_GTG, GTI).squeeze()
         
-        # Normalize to get Unit Normals
         albedo = cp.linalg.norm(n_est, axis=1, keepdims=True)
         normals = n_est / cp.where(albedo == 0, 1, albedo) 
 
         # 6. Calculate Angular Error
-        # Assuming Flat Board facing Z+ (0,0,1)
         gt_n = cp.array([0, 0, 1], dtype=cp.float32)
         dot_prod = cp.sum(normals * gt_n, axis=1)
         dot_prod = cp.clip(dot_prod, -1.0, 1.0)
@@ -216,19 +212,17 @@ class GeneralizedNormalProcessor:
         mean_err = float(np.mean(err_cpu))
         med_err = float(np.median(err_cpu))
 
-        cp.cuda.Device(0).synchronize() # Wait for solver and downloads
+        cp.cuda.Device(0).synchronize()
         print(f"  [Time] Solver & Validation: {time.time() - t_solve_start:.4f} sec")
         
         print(f" Error Analysis -> Mean: {mean_err:.2f}°, Median: {med_err:.2f}°, Max: {max_err:.2f}°")
 
-        # --- OUTPUT GENERATION (Preserved from Script 2) ---
+        # --- OUTPUT GENERATION ---
 
         print("Generating Outputs...")
         t_io_start = time.time()
 
         h, w = self.cfg['resolution']['width'], self.cfg['resolution']['height'] 
-        # Note: Be careful with H/W order. Script 2 had w=2100, h=1400. 
-        # Usually shape is (h, w). I will assume standard (height, width) for numpy arrays.
         h_res, w_res = self.cfg['resolution']['height'], self.cfg['resolution']['width']
 
         # A. Error Stats JSON
@@ -255,26 +249,24 @@ class GeneralizedNormalProcessor:
         with open(self.output_dir / "error_stats.json", 'w') as f:
             json.dump(stats, f, indent=4)
 
-        # B. Standard Normal Map (Visual RGB)
-        # Transform [-1, 1] -> [0, 1]
+        # B. Standard Normal Map
         n_map = np.zeros((h_res, w_res, 3), dtype=np.float32)
         n_map[v_idx, u_idx] = normals_cpu
         n_vis_uint16 = ((n_map + 1.0) / 2.0 * 65535).astype(np.uint16)
         cv2.imwrite(str(self.output_dir / "normal_map_linear.png"), cv2.cvtColor(n_vis_uint16, cv2.COLOR_RGB2BGR))
 
-        # C. Strict Component Map (Separate Channels)
+        # C. Strict Component Map
         n_strict_bgr = np.zeros((h_res, w_res, 3), dtype=np.uint16)
         norm_x_scaled = ((normals_cpu[:, 0] + 1.0) / 2.0 * 65535).astype(np.uint16)
         norm_y_scaled = ((normals_cpu[:, 1] + 1.0) / 2.0 * 65535).astype(np.uint16)
         norm_z_scaled = ((normals_cpu[:, 2] + 1.0) / 2.0 * 65535).astype(np.uint16)
         
-        # BGR Order: B=Z, G=Y, R=X (Matches Script 2 logic)
         n_strict_bgr[v_idx, u_idx, 0] = norm_z_scaled 
         n_strict_bgr[v_idx, u_idx, 1] = norm_y_scaled 
         n_strict_bgr[v_idx, u_idx, 2] = norm_x_scaled 
         cv2.imwrite(str(self.output_dir / "normal_components_scaled.png"), n_strict_bgr)
 
-        # D. Scaled Error Map (16-bit Grayscale)
+        # D. Scaled Error Map
         err_img_map = np.zeros((h_res, w_res), dtype=np.uint16)
         if max_err > min_err:
             err_norm = (err_cpu - min_err) / (max_err - min_err)
@@ -284,7 +276,7 @@ class GeneralizedNormalProcessor:
         err_img_map[v_idx, u_idx] = err_scaled
         cv2.imwrite(str(self.output_dir / "error_degree_map.png"), err_img_map)
 
-        # E. CSV Export (WITH Coordinates)
+        # E. CSV Export
         df_out = pd.DataFrame({
             'pixel_u': u_idx,
             'pixel_v': v_idx,
@@ -295,12 +287,11 @@ class GeneralizedNormalProcessor:
         })
         df_out.to_csv(self.output_dir / "pixelwise_normals_errors.csv", index=False)
 
-        # F. Detailed Heatmap (Visual)
+        # F. Detailed Heatmap
         err_plt = np.full((h_res, w_res), np.nan, dtype=np.float32)
         err_plt[v_idx, u_idx] = err_cpu
         
         plt.figure(figsize=(12, 10))
-        # Use 'jet' or 'inferno' - keeping 'jet' as per Script 2
         im = plt.imshow(err_plt, cmap='jet', interpolation='none')
         cbar = plt.colorbar(im)
         cbar.set_label('Angular Error (Degrees)', rotation=270, labelpad=15)
@@ -311,9 +302,8 @@ class GeneralizedNormalProcessor:
         plt.savefig(self.output_dir / "error_heatmap_detailed.png", dpi=150, bbox_inches='tight')
         plt.close()
 
-        # G. Geometry Verification (Scatter Plot)
+        # G. Geometry Verification
         plt.figure(figsize=(10, 8))
-        # Subsample for speed
         subset = df.iloc[::100]
         plt.scatter(subset['pixel_u'], subset['pixel_v'], c=subset['z_world'], s=1, cmap='viridis', label='Object Surface Z')
         plt.scatter(cam_u, cam_v, color='red', s=100, marker='x', label='Camera Center')
@@ -322,24 +312,21 @@ class GeneralizedNormalProcessor:
         plt.legend()
         plt.grid(True, alpha=0.3)
         plt.axis('equal') 
-        plt.gca().invert_yaxis() # Image V is down
+        plt.gca().invert_yaxis() 
         plt.savefig(self.output_dir / "geometry_offset_verification.png")
         plt.close()
 
         print(f"  [Time] Output Saving: {time.time() - t_io_start:.4f} sec")
-        
         print(f"Processing Complete. All outputs saved to: {self.output_dir}")
-        
         print(f"Total Execution Time: {time.time() - t_start_total:.4f} sec")
 
 if __name__ == "__main__":
     import sys
-    # You can pass config file as argument or hardcode default
     if len(sys.argv) > 1:
         cfg_path = sys.argv[1]
     else:
         # REPLACE THIS WITH YOUR ACTUAL CONFIG PATH IF RUNNING DIRECTLY
-        cfg_path = r"C:\Users\vishn\Desktop\avanthik\nrml_mp_cd\area_lit\upd_bat_proc_nrml_grl_cfg.json"
+        cfg_path = r"C:\Users\vishn\Desktop\avanthik\nrml_mp_cd\area_lit\upd_bat_proc_nrml_grl_fst_cfg.json"
     
     if os.path.exists(cfg_path):
         processor = GeneralizedNormalProcessor(cfg_path)

@@ -1,13 +1,13 @@
 {
   "paths": {
-    "input_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_gamma\\cropped",
-    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_gamma\\cropped\\histogram"
+    "input_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\bldr_op\\theor_op\\png_8bit\\dummy1\\check_max_nTG\\K_1.4\\area_sampl_30x30",
+    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\bldr_op\\theor_op\\png_8bit\\dummy1\\check_max_nTG\\K_1.4\\area_sampl_30x30\\histogram"
   },
   "settings": {
     "histogram_mode": "grayscale",
     "_comment_mode": "Options: 'rgb' (3 channels) or 'grayscale' (1 channel luminance).",
 
-    "use_mask": false,
+    "use_mask": true,
     "_comment_mask": "If true, uses Otsu method to ignore background pixels (prevents huge spikes at 0).",
     
     "combine_plots": false,

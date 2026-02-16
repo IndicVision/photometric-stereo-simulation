@@ -1,7 +1,7 @@
 {
   "io_settings": {
-    "input_csv": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\nrml_op\\otsu\\pixelwise_normals_errors.csv",
-    "output_image": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\nrml_op\\otsu\\heatmap_trimmed.png",
+    "input_csv": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\nrml_op\\otsu\\area_sampl_30x30\\cell_op\\5x5\\pixelwise_normals_errors.csv",
+    "output_image": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\nrml_op\\otsu\\area_sampl_30x30\\cell_op\\5x5\\heatmap_trimmed.png",
     "dpi": 300
   },
   "data_processing": {
@@ -12,10 +12,10 @@
       "value_col": "angular_error_deg"
     },
     "coordinate_filters": {
-      "x_min": 501,
-      "x_max": 1620,
-      "y_min": 431,
-      "y_max": 1168
+      "x_min": 510,
+      "x_max": 1614,
+      "y_min": 435,
+      "y_max": 1159
     },
     "fill_missing_values": null
   },

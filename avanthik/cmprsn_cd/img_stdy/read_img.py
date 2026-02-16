@@ -66,13 +66,36 @@ def get_image_details(file_path):
 
         # --- CASE 4: Standard Images (JPG, PNG, TIF) ---
         else:
-            data = iio.imread(file_path)
+            # TRY OPENCV FIRST WITH 'UNCHANGED' FLAG
+            # This is critical for 16-bit PNG/TIFF detection
+            data = cv2.imread(file_path, cv2.IMREAD_UNCHANGED)
+            
+            # Fallback to imageio if OpenCV fails (e.g. for some gifs or webp)
+            if data is None:
+                data = iio.imread(file_path)
+
             print(f"Extension   : {ext}")
             print(f"Structure   : {data.ndim}D Array (Standard)")
-            print(f"Resolution  : {data.shape[1]} x {data.shape[0]} (Width x Height)")
+            
+            # Handle grayscale vs color shapes
+            if data.ndim == 2:
+                h, w = data.shape
+                c = 1
+            else:
+                h, w, c = data.shape
+                
+            print(f"Resolution  : {w} x {h}")
             print(f"Array Shape : {data.shape}")
             print(f"Data Type   : {data.dtype}")
-            print(f"Bit Depth   : {data.itemsize * 8}-bit")
+            
+            # Accurate Bit Depth Calculation
+            bit_depth = data.itemsize * 8
+            print(f"Bit Depth   : {bit_depth}-bit")
+            
+            if bit_depth == 16:
+                print("STATUS: CONFIRMED 16-BIT IMAGE")
+            elif bit_depth == 8:
+                print("STATUS: 8-BIT IMAGE (Standard)")
 
     except Exception as e:
         print(f"ERROR: {e}")
@@ -90,7 +113,7 @@ def check_orientation(file_path):
 
 # --- USER INPUT ---
 # Make sure to use raw string (r"path") for Windows paths to avoid backslash errors
-image_path = r"C:\Users\vishn\Desktop\avanthik\cmr_op\basler\simulation_003\cr2_cmr_op\cr2_TO_png_linear\cropped\mask_op\otsu\mask_cropped_to_corners.png"
+image_path = r"C:\Users\vishn\Downloads\light_001.png"
 
 if os.path.exists(image_path):
     get_image_details(image_path)

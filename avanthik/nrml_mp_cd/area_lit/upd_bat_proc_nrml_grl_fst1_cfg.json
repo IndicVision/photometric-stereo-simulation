@@ -2,7 +2,7 @@
   "paths": {
     "world_coordinate_csv": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\mask_op\\otsu\\object_mapping.csv",
     "image_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped",
-    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\nrml_op\\otsu\\area_sampl_70x70"
+    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\nrml_op\\otsu\\area_sampl_70x70\\waste"
   },
   "global_settings": {
     "system_units": "m",

@@ -1,0 +1,7 @@
+{
+    "input_image_1": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\exact_basler\\bldr_op\\theor_op\\png_16bit\\area_sampl_200x200\\cropped\\light_002.png",
+    "input_image_2": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\exact_basler\\bldr_op\\png_16bit\\cropped\\light_002.png",
+    "output_diff_csv": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\exact_basler\\bldr_op\\theor_op\\png_16bit\\area_sampl_200x200\\cropped\\inten_diff_op\\inten_diff_data_L002.csv",
+    "output_heatmap_image": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\exact_basler\\bldr_op\\theor_op\\png_16bit\\area_sampl_200x200\\cropped\\inten_diff_op\\inten_heatmap_L002.png",
+    "K": 1.0
+}

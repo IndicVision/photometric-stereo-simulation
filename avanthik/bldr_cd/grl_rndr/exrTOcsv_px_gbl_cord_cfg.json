@@ -1,7 +1,7 @@
 {
   "paths": {
-    "input_root_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\px_gbl_cord_exr\\protype_3\\6240_4160",
-    "output_csv_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\px_gbl_cord_csv\\protype_3\\6240_4160"
+    "input_root_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\px_gbl_cord_exr\\basler\\camera_0.2\\2100_1400",
+    "output_csv_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\px_gbl_cord_csv\\basler\\camera_0.2\\2100_1400"
   },
   "processing": {
     "background_threshold": 1e-6,

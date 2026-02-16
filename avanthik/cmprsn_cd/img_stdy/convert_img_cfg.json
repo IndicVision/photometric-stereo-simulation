@@ -1,8 +1,8 @@
 {
   "io_settings": {
-    "input_path": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\light_004.CR2",
-    "output_folder": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear",
-    "output_filename": "light_004"
+    "input_path": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\bldr_op\\exr_32bit\\dummy1\\light_001.exr",
+    "output_folder": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\bldr_op\\exr_32bit\\dummy1\\exrTOpng_linear_16bit",
+    "output_filename": "light_001"
   },
 
   "target_format": {
@@ -24,7 +24,7 @@
     
     "color_management": {
       "_comment_modes": "Use 'none' if Raw->PNG (Visual). Use 'srgb_to_linear' if Raw->EXR (Data). Use 'linear_to_srgb' if EXR->PNG.",
-      "mode": "none", 
+      "mode": "linear_to_srgb", 
       "gamma_value": 1.0
     },
 
