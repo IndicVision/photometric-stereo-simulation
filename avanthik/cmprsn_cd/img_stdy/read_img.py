@@ -113,7 +113,7 @@ def check_orientation(file_path):
 
 # --- USER INPUT ---
 # Make sure to use raw string (r"path") for Windows paths to avoid backslash errors
-image_path = r"C:\Users\vishn\Downloads\light_001.png"
+image_path = r"C:\Users\vishn\Desktop\avanthik\cmr_op\basler\simulation_003\cr2_cmr_op\light_001.CR2"
 
 if os.path.exists(image_path):
     get_image_details(image_path)

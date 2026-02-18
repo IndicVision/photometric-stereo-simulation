@@ -1,0 +1,19 @@
+{
+    "io": {
+        "input_csv": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\exact_basler\\nrml_op\\bldr_otsu\\theor_op\\png_16bit\\area_sampl_200x200\\pixelwise_normals_errors.csv",
+        "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\exact_basler\\dpth_op\\bldr_otsu\\theor_op\\png_16bit\\area_sampl_200x200"
+    },
+    "geometry": {
+        "target_len_cm": 1.0,
+        "target_bre_cm": 1.0
+    },
+    "integration": {
+        "epsilon_nz": 0.15,
+        "solver_method": "direct_cholesky"
+    },
+    "visualization": {
+        "show_plots": true,
+        "colormap_steps": 64,
+        "cross_section_ylim_factor": 1.2
+    }
+}

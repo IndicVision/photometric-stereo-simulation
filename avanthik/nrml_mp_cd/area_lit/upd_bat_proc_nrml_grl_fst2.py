@@ -10,6 +10,7 @@ import json
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
+from scipy.spatial.transform import Rotation as R_scipy
 
 # --- OPTIMIZATION: Custom CUDA Kernel (Strategy 3) ---
 # This C++ code runs directly on the GPU.
@@ -308,7 +309,19 @@ class GeneralizedNormalProcessor:
         normals = n_est / cp.where(albedo == 0, 1, albedo) 
 
         # 6. Calculate Angular Error
-        gt_n = cp.array([0, 0, 1], dtype=cp.float32)
+        # Get Plane Config
+        elev = self.cfg['plane']['elevation_deg']
+        azim = self.cfg['plane']['azimuth_deg']
+        tilt = 90.0 - elev
+
+        # Compute True Normal (Rotated Z-vector)
+        # Matches the logic in upd_msk_pls_homgrph.py
+        r_obj = R_scipy.from_euler('zy', [azim, tilt], degrees=True)
+        true_normal_cpu = r_obj.apply(np.array([0, 0, 1])) # Apply rotation to Z-up
+
+        # Move to GPU for comparison
+        gt_n = cp.array(true_normal_cpu, dtype=cp.float32)
+
         dot_prod = cp.sum(normals * gt_n, axis=1)
         dot_prod = cp.clip(dot_prod, -1.0, 1.0)
         err_deg_gpu = cp.rad2deg(cp.arccos(dot_prod))

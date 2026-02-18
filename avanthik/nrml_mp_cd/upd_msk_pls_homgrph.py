@@ -239,6 +239,10 @@ class IntegratedPhotometricMapper:
     def apply_rigid_transform(self, local_points_3d):
         R = self.get_rigid_transform_matrix()
         T = self.center_pos
+        print(f"Rigid Transform Matrix:\n{R}")
+        print(f"Translation Vector:\n{T}")
+        print(f"R @ local_points_3d.T:\n{(R @ local_points_3d.T).T}")
+        print(f"R @ local_points_3d.T + T:\n{(R @ local_points_3d.T).T + T}")
         return (R @ local_points_3d.T).T + T
 
     def process(self):
@@ -268,26 +272,27 @@ class IntegratedPhotometricMapper:
         w_dim, h_dim = self.plane_dim
         
         local_corners_2d = np.array([
-            [-w_dim/2,  h_dim/2], # TL
-            [ w_dim/2,  h_dim/2], # TR
-            [ w_dim/2, -h_dim/2], # BR
-            [-w_dim/2, -h_dim/2]  # BL
+            [-w_dim/2, -h_dim/2], # TL
+            [w_dim/2, -h_dim/2], # TR
+            [w_dim/2, h_dim/2], # BR
+            [-w_dim/2, h_dim/2]  # BL
         ], dtype="float32")
-        
+        print(f"\n[DEBUG] Local Plane Corners in order TL, TR, BR, BL (cm):\n{local_corners_2d}")
         # 5. Compute Homography & Transforms
         H, _ = cv2.findHomography(pixel_corners, local_corners_2d)
-        
+        print(f"\n[DEBUG] Homography Matrix:\n{H}")
         # Debug Corners
         local_corners_3d = self.map_to_local_plane(pixel_corners, H)
-        local_corners_3d = local_corners_3d * -1.0
+        print(f"\n[DEBUG] Local Corners Mapped to Plane in order TL, TR, BR, BL (cm):\n{local_corners_3d}")
+        local_corners_3d[:, 0] = local_corners_3d[:, 0] * -1.0
         world_corners = self.apply_rigid_transform(local_corners_3d)
-        
+        print (f"\n[DEBUG] World Corners after Rigid Transform in order TL, TR, BR, BL (cm):\n{world_corners}")
         # 6. Map Pixels
         v_idx, u_idx = np.where(final_cropped_mask > 0)
         object_pixels_uv = np.stack([u_idx, v_idx], axis=1)
         
         object_local_3d = self.map_to_local_plane(object_pixels_uv, H)
-        object_local_3d = object_local_3d * -1.0
+        object_local_3d[:, 0] = object_local_3d[:, 0] * -1.0
         object_global_3d = self.apply_rigid_transform(object_local_3d)
 
         # 7. Reporting

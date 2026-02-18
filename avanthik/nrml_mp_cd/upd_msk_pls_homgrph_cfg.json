@@ -1,7 +1,7 @@
 {
   "paths": {
-    "input_images_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\exact_basler\\bldr_op\\png_16bit",
-    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\exact_basler\\mask_op\\bldr_otsu\\png_16bit"
+    "input_images_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_004\\bldr_op\\exr_32bit\\dummy1",
+    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_004\\mask_op\\bldr_otsu\\exr_32bit\\dummy1"
   },
 
   "camera": {
@@ -9,16 +9,16 @@
   },
 
   "plane": {
-    "dimensions_cm": [1.0, 1.0],
-    "center_position_cm": [0.0, 0.0, 0.0], 
+    "dimensions_cm": [3.05, 2.15],
+    "center_position_cm": [0.0, 0.0, 2.7], 
     
-    "elevation_deg": 90.0,
+    "elevation_deg": 120.0,
     "azimuth_deg": 0.0,
     "_comment": "Center position is [X, Y, Z] in cm. Elev 90 is flat facing up. Elev 0 is vertical."
   },
 
   "image_processing": {
-    "file_extension": ".png",
+    "file_extension": ".exr",
     "masking_method": "otsu",
     "corner_method": "sum_diff",  
     "_comment_corner": "Options: 'sum_diff' (standard) or 'radial' (robust to rotation)",
