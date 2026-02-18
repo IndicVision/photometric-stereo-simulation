@@ -1,0 +1,42 @@
+{
+  "io_settings": {
+    "input_csv": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\exact_basler\\nrml_op\\bldr_otsu\\png_16bit\\area_sampl_200x200\\pixelwise_normals_errors.csv",
+    "output_image": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\exact_basler\\nrml_op\\bldr_otsu\\png_16bit\\area_sampl_200x200\\heatmap_zoomed.png",
+    "dpi": 300
+  },
+  "data_processing": {
+    "data_type": "coordinate",
+    "coordinate_mapping": {
+      "x_col": "pixel_u",
+      "y_col": "pixel_v",
+      "value_col": "angular_error_deg"
+    },
+    "coordinate_filters": {
+      "x_min": 950,
+      "x_max": 1150,
+      "y_min": 600,
+      "y_max": 800
+    },
+    "fill_missing_values": null
+  },
+  "heatmap_style": {
+    "color_palette": "magma",
+    "figure_size": [14, 10], 
+    "title": "Pixelwise Distribution of Mean Normal Error in Degrees",
+    "show_annotations": false,
+    "equal_aspect_ratio": true,
+    "font_scale": 1.2,
+    "statistics_overlay": {
+      "show": true,
+      "position": "outside right", 
+      "font_size": 12,
+      "background_color": "#f0f0f0",
+      "background_alpha": 1.0
+    }
+  },
+  "value_range": {
+    "mode": "auto",
+    "min_value": 0,
+    "max_value": 45
+  }
+}

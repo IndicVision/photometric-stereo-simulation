@@ -1,0 +1,21 @@
+{
+  "paths": {
+    "source_csv": "C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\best_exposure_calculation_outputs\\Aggregated_EV_Report.csv",
+    "renders_dir": "C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\best_exposure_rendered_outputs",
+    "output_dir": "C:\\Users\\vishn\\Desktop\\avanthik\\comparison_outputs\\blender_sample_analysis_outputs\\dummy"
+  },
+  "analysis_settings": {
+    "patch_size": 100,
+    "exposure_method": "Aggregated_Mean_EV_Classical",
+    "color_mode": "RGB",
+    "variation_parameter": "Distance_cm",
+    "plotting_metric": "Error_Diff"
+  },
+  "plot_settings": {
+    "figure_width": 12,
+    "figure_height": 8,
+    "dpi": 200,
+    "marker_size": 7,
+    "line_width": 2.0
+  }
+}

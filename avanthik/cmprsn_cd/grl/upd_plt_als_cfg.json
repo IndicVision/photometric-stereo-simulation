@@ -1,0 +1,23 @@
+{
+  "paths": {
+    "normal_map_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\protype_3\\dis_als\\flat_pln\\sprd180_psi45\\areaSmpl_30_30",
+    "plot_output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmprsn_op\\protype_3\\dist_als\\nrml_err\\mean_err\\bldr_smpl"
+  },
+  "plot_specs": [
+    {
+      "plot_name": "Error_vs_Distance",
+      "x_axis": "dist",
+      "y_axis": "mean_error_deg",
+      "group_by": "samples",
+      "fixed_params": {
+        "num_l": 4,
+        "energy": 1.17
+      }
+    }
+  ],
+  "style_settings": {
+    "dpi": 300,
+    "figure_size": [12, 7],
+    "marker_size": 8
+  }
+}

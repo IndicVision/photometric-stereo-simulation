@@ -1,0 +1,99 @@
+{
+  "object_configs": [
+    {
+      "name": "White_Hill_Groove",
+      "azimuth_deg": 0.0,
+      "elevation_deg": 90.0,
+      "center_cm": [0.0, 0.0, 2.7],
+      
+      "base_length_cm": 3.0,
+      "base_breadth_cm": 3.0,
+      "base_thickness_mm": 1.0,
+      
+      "groove_type": "HILL", 
+      "_options1":["HILL", "DIP"],
+
+      "groove_radius_cm": 1.0,
+      "groove_length_cm": 0.0,
+      "groove_width_cm": 1.5,
+      "groove_axis_angle_deg": 0.0,
+      "use_spherical_caps": true
+    }
+  ],
+  "material": {
+    "name": "Perfect_Lambertian_White",
+    
+    "type": "DIFFUSE",
+    "_options2":["DIFFUSE", "PRINCIPLED"],
+    
+    "roughness": 0.0,
+    
+    "diffuse_color": [1.0, 1.0, 1.0, 1.0],
+    "_NOTE1":"ONLY THE DIFFUSE COLOR AND ROUGHNESS PARAMETERS ARE USED FOR THE DIFFUSE SHADER. ALL OTHER PARAMETERS ARE IGNORED.",
+    
+    "base_color": [1.0, 1.0, 1.0, 1.0],
+    "specular_ior_level": 0.0,
+    "metallic": 0.0,
+    "_NOTE2":"THE BASE COLOR, SPECULAR IOR LEVEL AND METALLIC PARAMETERS ARE USED FOR THE PRINCIPLED SHADER."
+  },
+  "camera": {
+    "type": "PERSP",
+    "_options3":["ORTHO", "PERSP"],
+
+    "position_cm": [0.0, 0.0, 30.0],
+    "look_at_cm": [0.0, 0.0, 0.0],
+    
+    "focal_length_mm": 50.0,
+    "_NOTE3":"only used for perspective camera",
+
+    "ortho_scale": 12.0,
+    "_NOTE4":"only used for orthographic camera"
+  },
+  "light_rig": {
+    "coordinates_cm": [
+        [3.325, 0, 7.025],
+        [0, 3.325, 7.025],
+        [-3.325, 0, 7.025],
+        [0, -3.325, 7.025]
+    ],
+    "directions": [
+        [-1, 0, 0], 
+        [0, -1, 0], 
+        [1, 0, 0], 
+        [0, 1, 0]
+    ],
+    "calibrated_power_w": [1.17, 1.17, 1.17, 1.17],
+    "light_ids": [1, 2, 3, 4]
+  },
+  "light_spec": {
+    "shape": "RECTANGLE",
+    "size_mm": [53.6, 53.6],
+    "beam_angle_deg": 180.0
+  },
+  "exposure": {
+    "start": 0.03,
+    "end": 0.03,
+    "step": 0.03
+  },
+  "render": {
+    "engine": "CYCLES",
+    "samples": 4096,
+    "resolution_x": 2100,
+    "resolution_y": 1400,
+    "device": "GPU",
+    "compute_device": "CUDA"
+  },
+  "photometric_settings": {
+    "view_transform": "Raw",
+    "gamma": 1.0,
+    "max_bounces": 0,
+    "disable_caustics": true,
+    "dither_intensity": 0.0
+  },
+  "output": {
+    "save_exr": true,
+    "save_png": true,
+    "png_bit_depth": 16,
+    "base_output_dir": "C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\basler\\simulation_006"
+  }
+}

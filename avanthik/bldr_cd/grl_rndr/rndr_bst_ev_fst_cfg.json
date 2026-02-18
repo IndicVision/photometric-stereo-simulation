@@ -1,0 +1,12 @@
+{
+  "exposure": {
+    "ev_methods": [
+      "Aggregated_Mean_EV_Classical"
+    ]
+  },
+  "paths": {
+    "exposure_csv_path": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_3\\flat_pln\\all_data\\sprd140_psi45\\bst_exp_cal_op\\Aggregated_EV_Report.csv",
+    "base_output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_3\\flat_pln\\all_data\\sprd140_psi45\\bst_exp_rndr_op",
+    "light_matrix_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_3\\flat_pln\\all_data\\sprd140_psi45\\lit_matr"
+  }
+}
