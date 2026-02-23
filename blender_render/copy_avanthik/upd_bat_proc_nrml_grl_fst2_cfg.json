@@ -1,0 +1,92 @@
+{
+  "paths": {
+    "world_coordinate_csv": "D:\\Chandana\\Photometric_Stereo\\photometric_stereo_simulation\\blender_render\\renders\\basis_vector_corrc_3\\mask\\object_mapping.csv",
+    "image_dir": "D:\\Chandana\\Photometric_Stereo\\photometric_stereo_simulation\\blender_render\\renders\\default\\exr_raw",
+    "output_dir": "D:\\Chandana\\Photometric_Stereo\\photometric_stereo_simulation\\blender_render\\renders\\basis_vector_corrc_3\\analysis"
+  },
+  "global_settings": {
+    "system_units": "m",
+    "apply_dark_threshold": false,
+    "dark_threshold_value": 0.02,
+    
+    "csv_from": "MskHom",
+    "_options": ["Blender", "MskHom"]
+  },
+  "camera": {
+    "use_auto_center": true,
+    "manual_center_pixel": [1050, 700],
+    "_comment": "Auto center assumes [W/2, H/2] is the optical axis."
+  },
+  "plane": {
+    "dimensions_cm": [3.05, 2.15],
+    "elevation_deg": 90.0,
+    "azimuth_deg": 0.0
+  },
+  "resolution": {
+    "width": 2100,
+    "height": 1400
+  },
+  
+ "lights": [
+    {
+      "id": "L001",
+      "file_name": "light_1.exr",
+      "shape": "RECT",
+      "pos_m": [-0.05566, -0.03214, 0.0766],
+      "norm_dir": [0.55664, 0.321423, -0.766055],
+      "dims_m": [0.0536, 0.0536],
+      "ax_u": [0.500055, -0.865994, 0.0],
+      "ax_v": [0.663398, 0.383069, 0.642776],
+      "radius_m": 0.006,
+      "sampling": [1000, 1000],
+      "gamma": 1.0,
+      "bit_depth": 1,
+      "spread_deg": 180.0
+    },
+    {
+      "id": "L002",
+      "file_name": "light_2.exr",
+      "shape": "RECT",
+      "pos_m": [-0.06313, -0.07523, 0.06882],
+      "norm_dir": [0.526428, 0.627328, -0.573876],
+      "dims_m": [0.0536, 0.0536],
+      "ax_u": [0.766022, -0.642814, 0.0],
+      "ax_v": [0.368896, 0.439601, 0.818942],
+      "radius_m": 0.006,
+      "sampling": [1000, 1000],
+      "gamma": 1.0,
+      "bit_depth": 1,
+      "spread_deg": 180.0
+    },
+    {
+      "id": "L003",
+      "file_name": "light_3.exr",
+      "shape": "RECT",
+      "pos_m": [0.06999, 0.04041, 0.09899],
+      "norm_dir": [-0.54769, -0.316219, -0.774623],
+      "dims_m": [0.0536, 0.0536],
+      "ax_u": [-0.500011, 0.866019, 0.0],
+      "ax_v": [-0.670838, -0.38732, 0.632423],
+      "radius_m": 0.006,
+      "sampling": [1000, 1000],
+      "gamma": 1.0,
+      "bit_depth": 1,
+      "spread_deg": 180.0
+    },
+    {
+      "id": "L004",
+      "file_name": "light_4.exr",
+      "shape": "RECT",
+      "pos_m": [-0.04899, 0.04899, 0.040],
+      "norm_dir": [0.612373, -0.612373, -0.499998],
+      "dims_m": [0.0536, 0.0536],
+      "ax_u": [-0.707107, -0.707107, 0.0],
+      "ax_v": [0.353552, -0.353552, 0.866026],
+      "radius_m": 0.006,
+      "sampling": [1000, 1000],
+      "gamma": 1.0,
+      "bit_depth": 1,
+      "spread_deg": 180.0
+    }
+  ]
+}

@@ -448,7 +448,7 @@ if __name__ == "__main__":
         cfg_path = sys.argv[1]
     else:
         # REPLACE WITH YOUR CONFIG PATH
-        cfg_path = r"C:\Users\vishn\Desktop\avanthik\nrml_mp_cd\area_lit\upd_bat_proc_nrml_grl_fst2_cfg.json"
+        cfg_path = r"D:\Chandana\Photometric_Stereo\photometric_stereo_simulation\avanthik\nrml_mp_cd\area_lit\upd_bat_proc_nrml_grl_fst2_cfg.json"
     
     if os.path.exists(cfg_path):
         processor = GeneralizedNormalProcessor(cfg_path)

@@ -1,8 +1,8 @@
 {
   "paths": {
-    "world_coordinate_csv": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_004\\mask_op\\bldr_otsu\\exr_32bit\\dummy1\\bldr_csv\\world_position.csv",
-    "image_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_004\\bldr_op\\exr_32bit\\dummy1",
-    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_004\\nrml_op\\bldr_otsu\\exr_32bit\\dummy1\\area_sampl_30x30\\bldr_csv"
+    "world_coordinate_csv": "D:\\Chandana\\Photometric_Stereo\\photometric_stereo_simulation\\blender_render\\renders\\Config_002\\analysis_results\\object_mapping.csv",
+    "image_dir": "D:\\Chandana\\Photometric_Stereo\\photometric_stereo_simulation\\blender_render\\renders\\Config_002\\exr_raw",
+    "output_dir": "D:\\Chandana\\Photometric_Stereo\\photometric_stereo_simulation\\blender_render\\renders\\Config_002\\analysis_results"
   },
   "global_settings": {
     "system_units": "m",

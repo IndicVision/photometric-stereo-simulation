@@ -30,9 +30,9 @@ class IntegratedPhotometricMapper:
         ext = self.cfg['image_processing']['file_extension']
         running_max = None
         
-        print(f"Scanning for light_XXX{ext} files...")
+        print(f"Scanning for light_X{ext} files...")
         for i in range(1, 1000): 
-            fname = f"light_{i:03d}{ext}"
+            fname = f"light_{i}{ext}"
             fpath = self.input_dir / fname
             if not fpath.exists(): break
 
@@ -318,7 +318,7 @@ class IntegratedPhotometricMapper:
         print(f"Done. Files saved to {self.output_dir}")
 
 if __name__ == "__main__":
-    CONFIG_PATH = r"C:\Users\vishn\Desktop\avanthik\nrml_mp_cd\upd_msk_pls_homgrph_cfg.json"
+    CONFIG_PATH = r"D:\Chandana\Photometric_Stereo\photometric_stereo_simulation\avanthik\nrml_mp_cd\upd_msk_pls_homgrph_cfg.json"
     if os.path.exists(CONFIG_PATH):
         IntegratedPhotometricMapper(CONFIG_PATH).process()
     else:

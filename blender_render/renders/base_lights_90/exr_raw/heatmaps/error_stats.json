@@ -1,0 +1,26 @@
+{
+    "mean_error": 3.038003921508789,
+    "median_error": 2.693772077560425,
+    "min_error": 0.0,
+    "max_error": 10.867361068725586,
+    "offsets": {
+        "camera_center_pixel": [
+            1050,
+            700
+        ],
+        "object_center_pixel": [
+            1049,
+            699
+        ],
+        "object_center_world": [
+            3.473804045917461e-05,
+            -3.478964555610808e-05,
+            0.027
+        ]
+    },
+    "scaling_info": {
+        "error_map_min_val": 0.0,
+        "error_map_max_val": 10.867361068725586,
+        "note": "error_degree_map.png is scaled from [min, max] to [0, 65535]"
+    }
+}

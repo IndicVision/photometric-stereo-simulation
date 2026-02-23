@@ -1,7 +1,7 @@
 {
   "paths": {
-    "input_images_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_004\\bldr_op\\exr_32bit\\dummy1",
-    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_004\\mask_op\\bldr_otsu\\exr_32bit\\dummy1"
+    "input_images_dir": "D:\\Chandana\\Photometric_Stereo\\photometric_stereo_simulation\\blender_render\\renders\\Config_001\\exr_raw",
+    "output_dir": "D:\\Chandana\\Photometric_Stereo\\photometric_stereo_simulation\\blender_render\\renders\\Config_001\\analysis_results"
   },
 
   "camera": {
