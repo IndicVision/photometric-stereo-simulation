@@ -1,0 +1,52 @@
+{
+  "plane_configs": [
+    {
+      "azimuth_deg": 0.0,
+      "elevation_deg": 90.0,
+      "center_cm": [0.0, 0.0, 2.7],
+      "length_cm": 3.05, 
+      "breadth_cm": 2.15
+    }
+  ],
+  "camera": {
+    "distance_cm": 20.0,
+    "focal_length_mm": 50.0
+  },
+
+  "calibrated_power_w": [1.17, 1.17, 1.17, 1.17],
+  "light_ids": [1, 2, 3, 4],
+
+  "light_spec": {
+    "luminous_flux_lm": 120.0,
+    "luminous_efficacy_lm_w": 300.0,
+    "beam_angle_deg": 180.0,
+    "shape": "RECTANGLE",
+    "size_mm": [53.6, 53.6]
+  },
+  "exposure": {
+    "start": 0.1,
+    "end": 0.2,
+    "step": 0.1
+  },
+  "render": {
+    "engine": "CYCLES",
+    "device": "GPU",
+    "compute_device": "CUDA",
+    "samples": 4096,
+    "resolution_x": 2100,
+    "resolution_y": 1400
+  },
+  "photometric_settings": {
+    "view_transform": "Raw",
+    "gamma": 1.0,
+    "max_bounces": 0,
+    "disable_caustics": true,
+    "dither_intensity": 0.0
+  },
+  "output": {
+    "save_exr": true,
+    "save_png": true,
+    "png_bit_depth": 16,
+    "base_output_dir": "D:\\Chandana\\Photometric_Stereo\\photometric_stereo_simulation\\blender_render\\renders\\test_3"
+  }
+}

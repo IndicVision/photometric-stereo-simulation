@@ -1,0 +1,45 @@
+{
+  "study_params": {
+    "target_cm": [0.0, 0.0, 2.7],
+    "theta_in_deg": 25.0
+  },
+  "lights": [
+    {"azimuth": 0.0, "zenith": 37.55, "radius_cm": 5.455},
+    {"azimuth": 90.0, "zenith": 37.55, "radius_cm": 5.455},
+    {"azimuth": 180.0, "zenith": 37.55, "radius_cm": 5.455},
+    {"azimuth": 270.0, "zenith": 37.55, "radius_cm": 5.455}
+  ],
+  "light_spec": {
+    "shape": "RECTANGLE",
+    "size_mm": [53.6, 53.6],
+    "beam_angle_deg": 180.0
+  },
+  "calibrated_power_w": [1.17, 1.17, 1.17, 1.17],
+  "render": {
+    "engine": "CYCLES",
+    "device": "GPU",
+    "compute_device": "CUDA",
+    "samples": 4096,
+    "resolution_x": 2100,
+    "resolution_y": 1400
+  },
+  "photometric_settings": {
+    "view_transform": "Raw",
+    "gamma": 1.0,
+    "max_bounces": 0,
+    "disable_caustics": true,
+    "dither_intensity": 0.0
+  },
+  "exposure": {
+    "start": 0.1,
+    "end": 0.3,
+    "step": 0.1
+  },
+  "output": {
+    "do_render": true,
+    "save_exr": true,
+    "save_png": true,
+    "png_bit_depth": 16,
+    "base_output_dir": "D:\\Chandana\\Photometric_Stereo\\photometric_stereo_simulation\\blender_render\\renders\\config_test_4"
+  }
+}
