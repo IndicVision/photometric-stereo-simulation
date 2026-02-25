@@ -1,0 +1,18 @@
+{
+    "base_path": "D:\\Chandana\\Photometric_Stereo\\PROTOTYPE_DESIGN\\lambertian_object\\dataset",
+    "output_path": "D:\\Chandana\\Photometric_Stereo\\PROTOTYPE_DESIGN\\lambertian_object\\histogram_outputs",
+    "csv_path": "D:\\Chandana\\Photometric_Stereo\\PROTOTYPE_DESIGN\\lambertian_object\\measurements.csv",
+    "csv_output":"D:\\Chandana\\Photometric_Stereo\\PROTOTYPE_DESIGN\\lambertian_object\\histogram_outputs\\headon_closeup\\peak_analysis_results.csv",
+    
+    "sample_num": [5],
+
+    "head_on": false,
+    
+    "orientation": {
+        "set_num": 2,
+        "light_num": [1,2],
+        "angle_range": [0, 5, 10, 15, 20]
+    },
+    
+    "brightness_level": [1, 2, 3, 4, 5]
+}

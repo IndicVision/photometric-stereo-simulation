@@ -1,0 +1,17 @@
+{
+    "base_path": "D:\\Chandana\\Photometric_Stereo\\PROTOTYPE_DESIGN\\lambertian_object\\dataset",
+    "output_path": "D:\\Chandana\\Photometric_Stereo\\PROTOTYPE_DESIGN\\lambertian_object\\histogram_outputs\\varying_light_orientation",
+    "csv_path": "D:\\Chandana\\Photometric_Stereo\\PROTOTYPE_DESIGN\\lambertian_object\\measurements.csv",
+
+
+    "sample_num": [5],
+    "set_num": 3,
+    "head_on": false,
+
+    "orientation": {
+        "light_num": [1,2,3,4],
+        "angle_range": [0, 5, 10, 15, 20]
+    }
+
+    
+}
