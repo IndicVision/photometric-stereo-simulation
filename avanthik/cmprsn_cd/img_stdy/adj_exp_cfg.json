@@ -1,0 +1,19 @@
+{
+  "inputs": [
+    "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmprsn_op\\msk_als\\dataset_003\\light_001.png",
+    "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmprsn_op\\msk_als\\dataset_003\\light_002.png",
+    "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmprsn_op\\msk_als\\dataset_003\\light_003.png",
+    "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmprsn_op\\msk_als\\dataset_003\\light_004.png"
+  ],
+  "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmprsn_op\\msk_als\\dataset_008",
+  
+  "exposure_type": "linear", 
+    "_options1": ["gamma", "logarithmic", "linear_scaling"],
+    "_NOTE1": "Choose 'gamma' for standard gamma correction and 'linear' to scale pixel values linearly based on a specified factor.",
+  
+  "exposure_value": 4.0,
+    "_NOTE2": "For 'gamma', this is the gamma value (e.g., 2.2). For 'linear_scaling', this is the scaling factor (e.g., 1.5 to brighten, 0.8 to darken)",
+  
+  "use_same_name": true,
+  "append_string": "_adjusted"
+}

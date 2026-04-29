@@ -1,0 +1,6 @@
+C:\Users\Deva_pg\Desktop\Full_App_laptop_server\mob_app\app\src\main\cpp\CMakeLists.txt
+C:\Users\Deva_pg\Desktop\Full_App_laptop_server\mob_app\app\src\main\cpp\sdk\native\jni\abi-armeabi-v7a\OpenCVConfig.cmake
+C:\Users\Deva_pg\Desktop\Full_App_laptop_server\mob_app\app\src\main\cpp\sdk\native\jni\abi-armeabi-v7a\OpenCVModules-release.cmake
+C:\Users\Deva_pg\Desktop\Full_App_laptop_server\mob_app\app\src\main\cpp\sdk\native\jni\abi-armeabi-v7a\OpenCVModules.cmake
+C:\Users\Deva_pg\Desktop\Full_App_laptop_server\mob_app\app\src\main\cpp\sdk\native\jni\OpenCVConfig-version.cmake
+C:\Users\Deva_pg\Desktop\Full_App_laptop_server\mob_app\app\src\main\cpp\sdk\native\jni\OpenCVConfig.cmake

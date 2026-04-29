@@ -1,0 +1,23 @@
+{
+  "input_csv": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\3d_object\\obj_005_SP_003\\dngTOpng_linear_16bit\\set1\\exp_lin_2.5\\nrml_op\\iteration_01\\mapping_iter1.csv",
+  "output_html": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\3d_object\\obj_005_SP_003\\dngTOpng_linear_16bit\\set1\\exp_lin_2.5\\nrml_op\\iteration_01\\3D_surface_custom.html",
+  "visualization": {
+    "z_exaggeration": 3.0,
+    "downsample_target_max_pixels": 600,
+    "colorscale": "RdYlBu",
+    "flip_x": false,
+    "flip_y": false
+  },
+  "lighting": {
+    "ambient": 0.2,
+    "diffuse": 1.0,
+    "roughness": 0.8,
+    "specular": 0.1,
+    "fresnel": 0.0
+  },
+  "light_position": {
+    "x": -1000,
+    "y": 0,
+    "z": 1
+  }
+}

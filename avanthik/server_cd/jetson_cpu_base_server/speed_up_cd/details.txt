@@ -1,0 +1,183 @@
+base 
+
+=================================================================
+  PROFILING SUMMARY (Cumulative Time Across All Iterations)
+=================================================================
+  1_initialization          :    0.168 seconds
+  2_estimate_normals        :   51.519 seconds
+  3_repair_normals          :   57.462 seconds
+  4_reconstruct_surface     :  262.295 seconds
+  5_save_visualizations     :  105.947 seconds
+  6_df_and_convergence      :    0.572 seconds
+-----------------------------------------------------------------
+  total_pipeline_time       :  481.624 seconds
+=================================================================
+
+================================================================================
+  MEMORY PROFILING SUMMARY (Peak Memory Observed Per Step)
+================================================================================
+  Step                      | Peak CPU RAM    | Peak GPU VRAM   | Peak System Swap
+--------------------------------------------------------------------------------
+  1_initialization          |  1263.1 MB       |    81.5 MB       |  2045.7 MB
+  2_estimate_normals        |  1270.1 MB       |    81.5 MB       |  2040.5 MB
+  3_repair_normals          |  1179.5 MB       |    81.5 MB       |  2187.6 MB
+  4_reconstruct_surface     |  1028.4 MB       |    81.5 MB       |  2500.2 MB
+  5_save_visualizations     |  1293.1 MB       |    81.5 MB       |  2393.1 MB
+================================================================================
+
+
+
+01
+
+=================================================================
+  PROFILING SUMMARY (Cumulative Time Across All Iterations)
+=================================================================
+  1_initialization          :    0.099 seconds
+  2_estimate_normals        :   54.434 seconds
+  3_repair_normals          :   22.560 seconds
+  4_reconstruct_surface     :  301.081 seconds
+  5_save_visualizations     :   51.246 seconds
+  6_df_and_convergence      :    2.905 seconds
+-----------------------------------------------------------------
+  total_pipeline_time       :  435.806 seconds
+=================================================================
+
+
+================================================================================
+  MEMORY PROFILING SUMMARY (Peak Memory Observed Per Step)
+================================================================================
+  Step                      | Peak CPU RAM    | Peak GPU VRAM   | Peak System Swap
+--------------------------------------------------------------------------------
+  1_initialization          |   936.8 MB       |   129.0 MB       |  2358.5 MB
+  2_estimate_normals        |  1053.7 MB       |   129.0 MB       |  2276.1 MB
+  3_repair_normals          |  1054.7 MB       |   129.0 MB       |  2275.7 MB
+  4_reconstruct_surface     |   870.3 MB       |   129.0 MB       |  2503.5 MB
+  5_save_visualizations     |  1128.4 MB       |   129.0 MB       |  2333.5 MB
+================================================================================
+
+
+02
+
+=================================================================
+  PROFILING SUMMARY (Cumulative Time Across All Iterations)
+=================================================================
+  1_initialization          :    0.101 seconds
+  2_estimate_normals        :   55.621 seconds
+  3_repair_normals          :    1.816 seconds
+  4_reconstruct_surface     :  402.768 seconds
+  5_save_visualizations     :   51.193 seconds
+  6_df_and_convergence      :    1.198 seconds
+-----------------------------------------------------------------
+  total_pipeline_time       :  515.538 seconds
+=================================================================
+
+
+================================================================================
+  MEMORY PROFILING SUMMARY (Peak Memory Observed Per Step)
+================================================================================
+  Step                      | Peak CPU RAM    | Peak GPU VRAM   | Peak System Swap
+--------------------------------------------------------------------------------
+  1_initialization          |   965.8 MB       |   129.0 MB       |  2160.2 MB
+  2_estimate_normals        |  1090.3 MB       |   129.0 MB       |  2072.9 MB
+  3_repair_normals          |  1091.0 MB       |   129.0 MB       |  2072.5 MB
+  4_reconstruct_surface     |  1153.0 MB       |   129.0 MB       |  2201.1 MB
+  5_save_visualizations     |  1260.8 MB       |   129.0 MB       |  1972.9 MB
+================================================================================
+
+
+03
+
+=================================================================
+  PROFILING SUMMARY (Cumulative Time Across All Iterations)
+=================================================================
+  1_initialization          :    0.102 seconds
+  2_estimate_normals        :   71.730 seconds
+  3_repair_normals          :    2.281 seconds
+  4_reconstruct_surface     :  246.775 seconds
+  5_save_visualizations     :   58.966 seconds
+  6_df_and_convergence      :    2.949 seconds
+-----------------------------------------------------------------
+  total_pipeline_time       :  385.153 seconds
+=================================================================
+
+
+================================================================================
+  MEMORY PROFILING SUMMARY (Peak Memory Observed Per Step)
+================================================================================
+  Step                      | Peak CPU RAM    | Peak GPU VRAM   | Peak System Swap
+--------------------------------------------------------------------------------
+  1_initialization          |  1149.5 MB       |   217.9 MB       |  2117.8 MB
+  2_estimate_normals        |  1164.0 MB       |   238.3 MB       |  2076.2 MB
+  3_repair_normals          |  1164.2 MB       |   238.3 MB       |  2076.0 MB
+  4_reconstruct_surface     |  1195.5 MB       |   238.3 MB       |  2156.7 MB
+  5_save_visualizations     |  1313.8 MB       |   217.9 MB       |  2010.2 MB
+================================================================================
+
+
+04
+
+=================================================================
+  PROFILING SUMMARY (Cumulative Time Across All Iterations)
+=================================================================
+  1_initialization          :    0.100 seconds
+  2_estimate_normals        :   74.663 seconds
+  3_repair_normals          :    2.293 seconds
+  4_reconstruct_surface     :  204.184 seconds
+  5_save_visualizations     :   60.467 seconds
+  6_df_and_convergence      :    1.178 seconds
+-----------------------------------------------------------------
+  total_pipeline_time       :  345.278 seconds
+=================================================================
+
+
+================================================================================
+  MEMORY PROFILING SUMMARY (Peak Memory Observed Per Step)
+================================================================================
+  Step                      | Peak CPU RAM    | Peak GPU VRAM   | Peak System Swap
+--------------------------------------------------------------------------------
+  1_initialization          |  1172.7 MB       |   217.9 MB       |  1979.1 MB
+  2_estimate_normals        |  1178.0 MB       |   238.3 MB       |  1894.4 MB
+  3_repair_normals          |  1178.0 MB       |   238.3 MB       |  1894.0 MB
+  4_reconstruct_surface     |  1224.5 MB       |   238.3 MB       |  2014.0 MB
+  5_save_visualizations     |  1345.4 MB       |   217.9 MB       |  1850.4 MB
+================================================================================
+
+
+05
+
+=================================================================
+  PROFILING SUMMARY (Cumulative Time Across All Iterations)
+=================================================================
+  1_initialization          :    0.099 seconds
+  2_estimate_normals        :   71.828 seconds
+  3_repair_normals          :    2.334 seconds
+  4_reconstruct_surface     :  216.747 seconds
+  5_save_visualizations     :   53.810 seconds
+  6_df_and_convergence      :    1.148 seconds
+-----------------------------------------------------------------
+  total_pipeline_time       :  348.271 seconds
+=================================================================
+
+
+================================================================================
+  MEMORY PROFILING SUMMARY (Peak Memory Observed Per Step)
+================================================================================
+  Step                      | Peak CPU RAM    | Peak GPU VRAM   | Peak System Swap
+--------------------------------------------------------------------------------
+  1_initialization          |  1154.2 MB       |   217.9 MB       |  2110.9 MB
+  2_estimate_normals        |  1170.9 MB       |   238.3 MB       |  2033.1 MB
+  3_repair_normals          |  1170.9 MB       |   238.3 MB       |  2032.8 MB
+  4_reconstruct_surface     |  1198.6 MB       |   238.3 MB       |  2141.1 MB
+  5_save_visualizations     |  1301.7 MB       |   217.9 MB       |  1993.8 MB
+================================================================================
+
+
+06
+
+
+
+
+
+
+
+
