@@ -1,0 +1,12 @@
+{
+  "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmprsn_op\\msk_als\\dataset_012\\mask\\trad_cv",
+  "image_paths": [
+    "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmprsn_op\\msk_als\\dataset_012\\light_001.png",
+    "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmprsn_op\\msk_als\\dataset_012\\light_002.png",
+    "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmprsn_op\\msk_als\\dataset_012\\light_003.png",
+    "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmprsn_op\\msk_als\\dataset_012\\light_004.png"
+  ],
+  
+  "world_coordinates": [0.0, 0.0, 0.042],
+  "generate_csv": false
+}

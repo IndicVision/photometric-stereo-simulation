@@ -1,0 +1,16 @@
+{
+  "data_settings": {
+    "input_csv_path": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\err_als_strg\\bldr_inv_sqr_law\\4096_180\\plt\\area_gdsiz_30\\samples_4096\\0.00_60.00_0.00_0.00_0.00_9.57\\4_6.00_area_rectangle_180.0_45.00_1.17\\slopes_summary_Gray_Binned_Median_Poly1.csv",
+    "output_plot_path": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\nrml_mp_op\\area_lit\\area_dscrt_mtd\\err_als_strg\\bldr_inv_sqr_law\\4096_180\\plt\\area_gdsiz_30\\samples_4096\\0.00_60.00_0.00_0.00_0.00_9.57\\4_6.00_area_rectangle_180.0_45.00_1.17\\slope_ratio_Gray_Binned_Median_Poly1.png",
+    "theoretical_slope_value": 319.7797
+  },
+  "plot_settings": {
+    "title": "Slope Ratio Analysis (Simulated / Theoretical) - Dist 6cm",
+    "x_label": "Light Source ID",
+    "y_label": "Ratio (Slope (Median)/ Theoretical)",
+    "reference_line_color": "red",
+    "data_point_color": "blue",
+    "show_grid": true,
+    "y_limits": null
+  }
+}

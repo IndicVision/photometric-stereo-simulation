@@ -1,0 +1,24 @@
+{
+    "pipeline_type": "photometric_stereo",
+    "images": [
+        "light_001.png",
+        "light_002.png",
+        "light_003.png",
+        "light_004.png"
+    ],
+    "camera_settings": {
+        "iso": 100,
+        "shutter_speed": "1\/100s",
+        "focal_length_mm": 5.400000095367432,
+        "sensor_width_mm": 7.257599830627441,
+        "sensor_height_mm": 5.44320011138916,
+        "image_width": 3024,
+        "image_height": 4032,
+        "object_distance_m": 0.071
+    },
+    "requested_outputs": {
+        "3d_surface_html": true,
+        "depth_map_png": true,
+        "normal_map_png": true
+    }
+}

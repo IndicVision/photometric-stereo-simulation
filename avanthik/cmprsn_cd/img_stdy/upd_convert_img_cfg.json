@@ -1,0 +1,41 @@
+{
+  "io_settings": {
+    "input_paths": [
+      "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\3d_object\\obj_005_SP_005\\DNG\\set2\\light_001.DNG",
+      "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\3d_object\\obj_005_SP_005\\DNG\\set2\\light_002.DNG",
+      "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\3d_object\\obj_005_SP_005\\DNG\\set2\\light_003.DNG",
+      "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\3d_object\\obj_005_SP_005\\DNG\\set2\\light_004.DNG"
+    ],
+    "output_folder": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\3d_object\\obj_005_SP_005\\dngTOpng_linear_16bit\\set2"
+  },
+
+  "target_format": {
+    "extension": ".png",
+    "bit_depth": 16,
+    "dtype": "uint16"
+  },
+
+  "blind_raw_settings": {
+    "_comment": "Only required if input file is .raw (binary stream)",
+    "width": 6240,
+    "height": 4160,
+    "channels": 1,
+    "dtype": "uint8"
+  },
+
+  "processing_pipeline": {
+    "demosaic_raw": true,
+    
+    "color_management": {
+      "_comment_modes": "Use 'none' if Raw->PNG (Visual). Use 'srgb_to_linear' if Raw->EXR (Data). Use 'linear_to_srgb' if EXR->PNG.",
+      "mode": "linear_to_srgb", 
+      "gamma_value": 1.0
+    },
+
+    "tone_mapping": {
+      "_comment": "Enable this if converting EXR/HDR (Linear) to PNG/JPG (Standard) to prevent clipping.",
+      "enable": false,
+      "method": "simple_reinhard"
+    }
+  }
+}

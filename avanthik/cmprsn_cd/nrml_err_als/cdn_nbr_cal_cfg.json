@@ -1,0 +1,53 @@
+{
+  "paths": {
+    "world_coordinate_csv": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\mask_op\\bldr_otsu\\png_8bit\\dummy1\\object_mapping.csv",
+    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\nrml_op\\bldr_otsu\\png_8bit\\dummy1\\area_sampl_30x30"
+  },
+  "global_settings": {
+    "system_units": "m",
+    "csv_from": "MskHom",
+    "_options": ["Blender", "MskHom"]
+  },
+  "resolution": {
+    "width": 2100,
+    "height": 1400
+  },
+  "lights": [
+    {
+      "id": "L001",
+      "shape": "RECT",
+      "pos_m": [0.03325, 0, 0.07025],
+      "norm_dir": [-1.0, 0.0, 0.0],
+      "dims_m": [0.0536, 0.0536],
+      "sampling": [30, 30], 
+      "spread_deg": 180.0
+    },
+    {
+      "id": "L002",
+      "shape": "RECT",
+      "pos_m": [0, 0.03325, 0.07025],
+      "norm_dir": [0.0, -1.0, 0.0],
+      "dims_m": [0.0536, 0.0536],
+      "sampling": [30, 30], 
+      "spread_deg": 180.0
+    },
+    {
+      "id": "L003",
+      "shape": "RECT",
+      "pos_m": [-0.03325, 0, 0.07025],
+      "norm_dir": [1.0, 0.0, 0.0],
+      "dims_m": [0.0536, 0.0536],
+      "sampling": [30, 30], 
+      "spread_deg": 180.0
+    },
+    {
+      "id": "L004",
+      "shape": "RECT",
+      "pos_m": [0, -0.03325, 0.07025],
+      "norm_dir": [0.0, 1.0, 0.0],
+      "dims_m": [0.0536, 0.0536],
+      "sampling": [30, 30], 
+      "spread_deg": 180.0
+    }
+  ]
+}

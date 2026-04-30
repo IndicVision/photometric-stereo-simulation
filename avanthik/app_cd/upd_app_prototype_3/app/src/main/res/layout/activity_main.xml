@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextureView
+            android:id="@+id/textureView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.ps.photocapture.FocusOverlayView
+            android:id="@+id/focusOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <HorizontalScrollView
+            android:id="@+id/previewScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF000000"
+            android:visibility="gone">
+            <LinearLayout
+                android:id="@+id/previewContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp"/>
+        </HorizontalScrollView>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/connectionStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NOT CONNECTED TO JETSON"
+        android:textColor="#FFFFFF"
+        android:background="#F44336"
+        android:padding="8dp"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cameraInfoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CC000000"
+        android:text="Initializing Camera..."
+        android:textColor="#00FF00"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:padding="6dp"
+        android:gravity="center" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="#1A1A1A">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preview Lighting:"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cbLight1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:text="L1" />
+            <CheckBox
+                android:id="@+id/cbLight2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:text="L2" />
+            <CheckBox
+                android:id="@+id/cbLight3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:text="L3" />
+            <CheckBox
+                android:id="@+id/cbLight4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:text="L4" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnTurnOffPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Turn Off Preview Lights"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/setupUiContainer"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="#CC111111"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+                <TextView android:layout_width="72dp" android:layout_height="wrap_content" android:text="ISO" android:textColor="#FFFFFF" android:textStyle="bold" />
+                <SeekBar android:id="@+id/isoSeekBar" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:minHeight="48dp" />
+                <TextView android:id="@+id/isoValueText" android:layout_width="72dp" android:layout_height="wrap_content" android:text="100" android:textColor="#00FF00" android:gravity="end" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+                <TextView android:layout_width="72dp" android:layout_height="wrap_content" android:text="Shutter" android:textColor="#FFFFFF" android:textStyle="bold" />
+                <SeekBar android:id="@+id/shutterSeekBar" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:minHeight="48dp" />
+                <TextView android:id="@+id/shutterValueText" android:layout_width="72dp" android:layout_height="wrap_content" android:text="1/125s" android:textColor="#00FF00" android:gravity="end" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                <TextView android:layout_width="72dp" android:layout_height="wrap_content" android:text="White Bal" android:textColor="#FFFFFF" android:textStyle="bold" />
+                <Spinner android:id="@+id/wbSpinner" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:backgroundTint="#FFFFFF" />
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Focus Controls" android:textColor="#FFFFFF" android:textStyle="bold" android:layout_marginBottom="4dp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/focusModeSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enable Manual Focus"
+                android:textColor="#FFFFFF"
+                android:minHeight="48dp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout android:id="@+id/autoFocusControls" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                <TextView android:id="@+id/focusStatusText" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Auto Focus" android:textColor="#AAAAAA" />
+                <Button android:id="@+id/lockFocusButton" android:layout_width="wrap_content" android:layout_height="48dp" android:text="Lock Focus" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/manualFocusContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone" android:layout_marginBottom="12dp">
+                <TextView android:id="@+id/manualFocusValueText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Infinity" android:textColor="#00FF00" android:gravity="end" />
+                <SeekBar android:id="@+id/manualFocusSeekBar" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="1000" android:minHeight="48dp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/autoExposureSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Auto-Expose (Probe)"
+                android:textColor="#00FF00"
+                android:checked="false"
+                android:layout_marginBottom="8dp" />
+
+            <Button android:id="@+id/continueToCaptureButton" android:layout_width="match_parent" android:layout_height="52dp" android:text="CONTINUE TO CAPTURE" android:textStyle="bold" android:layout_marginTop="8dp" android:backgroundTint="#2196F3" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/captureUiContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#CC111111"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ready for Capture"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:paddingBottom="12dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Capture Format" android:textColor="#FFFFFF" android:textStyle="bold" android:layout_marginBottom="6dp" />
+        <RadioGroup android:id="@+id/formatRadioGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+            <RadioButton android:id="@+id/formatJpeg" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="JPEG" android:textColor="#FFFFFF" android:buttonTint="#00FF00" android:minHeight="48dp"/>
+            <RadioButton android:id="@+id/formatDng" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="RAW" android:textColor="#FFFFFF" android:buttonTint="#00FF00" android:minHeight="48dp"/>
+            <RadioButton android:id="@+id/formatBoth" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="BOTH" android:textColor="#FFFFFF" android:buttonTint="#00FF00" android:checked="true" android:minHeight="48dp"/>
+        </RadioGroup>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+            <TextView android:id="@+id/framesLabel" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Frames per light" android:textColor="#FFFFFF" android:textStyle="bold" android:labelFor="@id/framesInput"/>
+            <EditText android:id="@+id/framesInput" android:layout_width="80dp" android:layout_height="wrap_content" android:inputType="number" android:text="1" android:textColor="#FFFFFF" android:backgroundTint="#FFFFFF" android:gravity="center" android:hint="1" android:autofillHints="none" android:minHeight="48dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/startSequenceButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="START SEQUENCE"
+            android:textStyle="bold"
+            android:backgroundTint="#4CAF50" />
+
+        <Button
+            android:id="@+id/uploadButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="PROCESS RAW IMAGES"
+            android:textStyle="bold"
+            android:backgroundTint="#FF9800"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/calibrateButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="CALIBRATE LIGHTS"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#9C27B0"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/retakeButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="RETAKE"
+            android:textColor="#FF5252"
+            android:backgroundTint="#333333"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</LinearLayout>

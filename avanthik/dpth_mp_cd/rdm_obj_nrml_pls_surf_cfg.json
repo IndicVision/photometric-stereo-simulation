@@ -1,0 +1,96 @@
+{
+  "paths": {
+    "output_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\3d_object\\obj_005_SP_003\\dngTOpng_linear_16bit\\set1\\exp_lin_2.5\\nrml_op",
+    "world_coordinate_csv": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\3d_object\\obj_005_SP_003\\dngTOpng_linear_16bit\\set1\\exp_lin_2.5\\mask\\valid_pixels.csv",
+    "image_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\3d_object\\obj_005_SP_003\\dngTOpng_linear_16bit\\set1\\exp_lin_2.5"
+  },
+  "global_settings": {
+    "csv_from": "MskHom",
+    "apply_dark_threshold": true,
+    "dark_threshold_value": 0.03,
+    "min_valid_lights": 3,
+    "detrending_mode": "quadratic", 
+    "z_exaggeration": 3.0,
+    "max_iterations": 15,
+    "convergence_threshold": 1e-5
+  },
+  "camera": {
+    "use_auto_center": false,
+    "manual_center_pixel": [1512, 2016],
+    "sensor_width_mm": 2.38,
+    "focal_length_mm": 2.22,
+    "object_distance_m": 0.021
+  },
+  "plane": {
+    "dimensions_cm": [],
+    "elevation_deg": 90.0,
+    "azimuth_deg": 0.0
+  },
+  "resolution": {
+    "width": 3024,
+    "height": 4032
+  },
+
+  "lights": [
+    {
+      "id": "L001",
+      "file_name": "light_001.png",
+      "shape": "RECT",
+      "pos_m": [0.09, 0.0, 0.0658],
+      "dims_m": [0.0156, 0.0536],
+      "norm_dir": [-1.0, 0.0, 0.0],    
+      "ax_u": [0.0, 0.0, 1.0],
+      "ax_v": [0.0, 1.0, 0.0],        
+      "radius_m": 0.006,
+      "sampling": [300, 1000],
+      "gamma": 1.0,
+      "bit_depth": 16,
+      "spread_deg": 180.0
+    },
+    {
+      "id": "L002",
+      "file_name": "light_002.png",
+      "shape": "RECT",
+      "pos_m": [0, 0.09, 0.0658],
+      "dims_m": [0.0536, 0.0156],
+      "norm_dir": [0.0, -1.0, 0.0],
+      "ax_u": [1.0, 0.0, 0.0],
+      "ax_v": [0.0, 0.0, 1.0],
+      "radius_m": 0.006,
+      "sampling": [1000, 300],
+      "gamma": 1.0,
+      "bit_depth": 16,
+      "spread_deg": 180.0
+    },
+    {
+      "id": "L003",
+      "file_name": "light_003.png",
+      "shape": "RECT",
+      "pos_m": [-0.09, 0.0, 0.0658],
+      "dims_m": [0.0156, 0.0536],
+      "norm_dir": [1.0, 0.0, 0.0],
+      "ax_u": [0.0, 0.0, 1.0],
+      "ax_v": [0.0, 1.0, 0.0],
+      "radius_m": 0.006,
+      "sampling": [300, 1000],
+      "gamma": 1.0,
+      "bit_depth": 16,
+      "spread_deg": 180.0
+    },
+    {
+      "id": "L004",
+      "file_name": "light_004.png",
+      "shape": "RECT",
+      "pos_m": [0.0, -0.09, 0.0658],
+      "dims_m": [0.0536, 0.0156],
+      "norm_dir": [0.0, 1.0, 0.0],
+      "ax_u": [1.0, 0.0, 0.0],
+      "ax_v": [0.0, 0.0, 1.0],
+      "radius_m": 0.006,
+      "sampling": [1000, 300],
+      "gamma": 1.0,
+      "bit_depth": 16,
+      "spread_deg": 180.0
+    }
+  ]
+}

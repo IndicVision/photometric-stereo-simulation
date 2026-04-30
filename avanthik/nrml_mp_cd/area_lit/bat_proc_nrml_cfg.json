@@ -1,0 +1,26 @@
+{
+  "paths": {
+    "renders_dir": "C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\main_storage\\best_exposure_rendered_outputs",
+    "light_matrix_dir": "C:\\Users\\vishn\\Desktop\\avanthik\\blender_outputs\\main_storage\\light_matrices",
+    "reconstruction_output_dir": "C:\\Users\\vishn\\Desktop\\avanthik\\normal_map_outputs\\area_discretization_method\\main_storage"
+  },
+  "analysis_settings": {
+    "exposure_method": "Aggregated_Mean_EV_Classical"
+  },
+  "area_light_props": {
+    "dim_a_cm": 5.5,
+    "dim_b_cm": 5.5
+  },
+  "reconstruction_settings": {
+    "samples_per_axis": 4,
+    "background_threshold": 0.05,
+    "mask_erosion_iter": 2,
+    "discard_irrelevant_l_vectors": true,
+    "use_blender_energy_scaling": true
+  },
+  "outputs": {
+    "save_error_heatmap": true,
+    "save_per_pixel_csv": true,
+    "save_stats_report": true
+  }
+}

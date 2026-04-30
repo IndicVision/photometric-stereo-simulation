@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Photo Capture PS</string>
+
+    <string name="initializing_camera">Initializing Camera...</string>
+    <string name="label_iso">ISO</string>
+    <string name="default_iso_value">ISO 800</string>
+    <string name="label_shutter">Shutter</string>
+    <string name="default_shutter_value">1/60s</string>
+    <string name="label_wb">WB</string>
+    <string name="label_focus_controls">Focus Controls</string>
+    <string name="enable_manual_focus">Enable Manual Focus Override</string>
+    <string name="focus_status_auto">Focus: Auto — tap to focus</string>
+    <string name="btn_lock_focus">Lock Focus</string>
+    <string name="focus_distance_infinity">Focus: ∞</string>
+    <string name="label_capture_format">Capture Format</string>
+    <string name="format_jpeg">JPEG</string>
+    <string name="format_dng">DNG</string>
+    <string name="format_both">BOTH</string>
+    <string name="label_frames_per_light">Frames (1-10): </string>
+    <string name="default_frame_count">1</string>
+    <string name="btn_continue">LOCK SETTINGS &amp; CONTINUE</string>
+
+    <string name="status_ready">Ready for capture sequence...</string>
+    <string name="btn_start_capture">START CAPTURE SEQUENCE</string>
+    <string name="btn_process_raw">PROCESS RAW IMAGES (C++)</string>
+    <string name="btn_retake">RETAKE (UNLOCK SETTINGS)</string>
+
+    <string name="hint_frames">1</string>
+</resources>

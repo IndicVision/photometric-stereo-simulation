@@ -1,0 +1,19 @@
+{
+  "paths": {
+    "input_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_3\\flat_pln\\all_data\\sprd140_psi45\\mlt_exp_rndr_op",
+    "output_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_3\\flat_pln\\all_data\\sprd140_psi45\\bst_exp_cal_op",
+    "light_matrix_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\protype_3\\flat_pln\\all_data\\sprd140_psi45\\lit_matr",
+    "report_filename": "Optimization_Report.csv"
+  },
+  "plotting": {
+    "save_hist_plots": false,
+    "save_gd_plots": false
+  },
+  "constants": {
+    "target_mean": 128.0,
+    "pixel_min": 0,
+    "pixel_max": 255,
+    "hist_bins": 256,
+    "epsilon_weight": 1e-6
+  }
+}

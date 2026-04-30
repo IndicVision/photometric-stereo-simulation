@@ -1,0 +1,993 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "C:/Users/vishn/Desktop/avanthik/app_cd/PhotoStereo/app/build/intermediates/cxx/Debug/2re5e625/obj/arm64-v8a/libps_engine.so"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"target_compile_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 18,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 21,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "NO_JASPER"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "NO_JPEG"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "NO_ZLIB"
+				},
+				{
+					"define" : "ps_engine_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "C:/Users/vishn/Desktop/avanthik/app_cd/PhotoStereo/app/src/main/cpp/libraw"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "C:/Users/vishn/Desktop/avanthik/app_cd/PhotoStereo/app/src/main/cpp/sdk/native/jni/include"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79
+			],
+			"sysroot" : 
+			{
+				"path" : "C:/Users/vishn/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot"
+			}
+		}
+	],
+	"id" : "ps_engine::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\28\\liblog.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_calib3d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_core.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_dnn.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_features2d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_flann.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_gapi.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_highgui.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_imgcodecs.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_imgproc.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_ml.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_objdetect.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_photo.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_stitching.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_video.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_videoio.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libade.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_imgcodecs.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibjpeg-turbo.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibwebp.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibpng.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibtiff.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibopenjp2.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-pthread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libIlmImf.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-landroid -llog -lmediandk",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_dnn.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibprotobuf.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-landroid",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-llog",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_calib3d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_features2d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_flann.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_imgproc.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_core.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libtbb.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lc",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lz",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libcpufeatures.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libittnotify.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-llog",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libtegra_hal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libkleidicv_hal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libkleidicv_thread.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Users\\vishn\\Desktop\\avanthik\\app_cd\\PhotoStereo\\app\\src\\main\\cpp\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libkleidicv.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-latomic -lm",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX",
+		"sysroot" : 
+		{
+			"path" : "C:/Users/vishn/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot"
+		}
+	},
+	"name" : "ps_engine",
+	"nameOnDisk" : "libps_engine.so",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ps_engine.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/canon_600.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/crx.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/decoders_dcraw.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/decoders_libraw.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/decoders_libraw_dcrdefs.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/dng.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/fp_dng.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/fuji_compressed.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/generic.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/kodak_decoders.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/load_mfbacks.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/olympus14.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/pana8.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/smal.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/sonycc.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/unpack.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decoders/unpack_thumb.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/decompressors/losslessjpeg.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/demosaic/aahd_demosaic.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/demosaic/ahd_demosaic.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/demosaic/dcb_demosaic.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/demosaic/dht_demosaic.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/demosaic/misc_demosaic.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/demosaic/xtrans_demosaic.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/integration/dngsdk_glue.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/integration/rawspeed_glue.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/libraw_c_api.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/libraw_datastream.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/adobepano.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/canon.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/ciff.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/cr3_parser.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/epson.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/exif_gps.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/fuji.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/hasselblad_model.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/identify.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/identify_tools.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/kodak.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/leica.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/makernotes.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/mediumformat.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/minolta.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/misc_parsers.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/nikon.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/normalize_model.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/olympus.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/p1.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/pentax.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/samsung.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/sony.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/metadata/tiff.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/postprocessing/aspect_ratio.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/postprocessing/dcraw_process.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/postprocessing/mem_image.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/postprocessing/postprocessing_aux.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/postprocessing/postprocessing_utils.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/postprocessing/postprocessing_utils_dcrdefs.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/preprocessing/ext_preprocess.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/preprocessing/raw2image.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/preprocessing/subtract_black.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/tables/cameralist.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/tables/colorconst.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/tables/colordata.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/tables/wblists.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/utils/curves.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/utils/decoder_info.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/utils/init_close_utils.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/utils/open.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/utils/phaseone_processing.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/utils/read_utils.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/utils/thumb_utils.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/utils/utils_dcraw.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/utils/utils_libraw.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/write/apply_profile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/write/file_write.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/write/tiff_writer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/x3f/x3f_parse_process.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libraw/src/x3f/x3f_utils_patched.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

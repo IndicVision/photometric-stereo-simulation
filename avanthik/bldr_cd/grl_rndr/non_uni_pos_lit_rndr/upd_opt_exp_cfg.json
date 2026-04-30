@@ -1,0 +1,19 @@
+{
+  "paths": {
+    "input_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\non_uni_pos_lit_rndr\\oth_bldr_als\\nrfld_als\\type_02\\4096_180\\mlt_exp_rndr_op",
+    "output_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\non_uni_pos_lit_rndr\\oth_bldr_als\\nrfld_als\\type_02\\4096_180\\bst_exp_cal_op",
+    "light_matrix_base_dir": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\bldr_op\\non_uni_pos_lit_rndr\\oth_bldr_als\\nrfld_als\\type_02\\4096_180\\lit_matr",
+    "report_filename": "Optimization_Report.csv"
+  },
+  "plotting": {
+    "save_hist_plots": false,
+    "save_gd_plots": false
+  },
+  "constants": {
+    "target_mean": 128.0,
+    "pixel_min": 0,
+    "pixel_max": 255,
+    "hist_bins": 256,
+    "epsilon_weight": 1e-6
+  }
+}

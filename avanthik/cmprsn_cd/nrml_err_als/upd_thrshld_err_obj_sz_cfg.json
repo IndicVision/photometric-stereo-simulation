@@ -1,0 +1,29 @@
+{
+    "files": {
+        "errors": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\nrml_op\\otsu\\area_sampl_30x30\\pixelwise_normals_errors.csv",
+        "mapping": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\mask_op\\otsu\\object_mapping.csv",
+        "output_plot": "\\\\?\\C:\\Users\\vishn\\Desktop\\avanthik\\cmr_op\\basler\\simulation_003\\cr2_cmr_op\\cr2_TO_png_linear\\cropped\\nrml_op\\otsu\\area_sampl_30x30\\obj_threshold_size_gaussianFIT_2.0.png"
+    },
+    "dimensions": {
+        "length_cm": 3.05,
+        "width_cm": 2.15
+    },
+    "analysis": {
+        "offset_percentage": 0.90,
+        "threshold_error_deg": 2.0
+    },
+    "fitting": {
+        "method": "gaussian", 
+        "use_fit_for_analysis": true,
+        "polynomial": {
+            "degree": 2
+        },
+        "gaussian": {
+            "gamma": 1.0,
+            "alpha": 0.01
+        }
+    },
+    "plot_settings": {
+        "limit_view": 1.0
+    }
+}
